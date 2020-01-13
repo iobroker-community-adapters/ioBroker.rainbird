@@ -225,8 +225,10 @@ function pollStates() {
 			let avail = (result.states[i] ? true : false);
 			let idx = 'device.stations.' + s + '.available';
 			setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
-			setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
-			setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
+			if(avail) {
+				setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
+				setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
+			}
 		}
 	});
 	
