@@ -290,7 +290,7 @@ function processStateChange(id, value) {
 			}
 		});
 	} else if(id === 'device.settings.rainDelay') {
-		controller.setRainDelay(function(result) {
+		controller.setRainDelay(value, function(result) {
 			if(result) {
 				adapter.setState(id, value, true);
 			}
@@ -307,7 +307,7 @@ function processStateChange(id, value) {
 		} else {
 			found = id.match(/^device\.stations\.(\d+)\.runZone$/);
 			if(found) {
-				controller.cmdRunZone(found[1], function(result) {
+				controller.cmdRunZone(found[1], value, function(result) {
 					if(result) {
 						adapter.setState(id, value, true);
 						pollStates();
