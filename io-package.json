@@ -1,0 +1,79 @@
+{
+	"common": {
+		"name": "rainbird",
+		"version": "0.1.0",
+		"news": {
+			"0.1.0": {
+				"en": "Initial version",
+				"de": "Initiale Version",
+				"ru": "Первоначальный вариант",
+				"pt": "Versão inicial",
+				"nl": "Eerste versie",
+				"fr": "Version initiale",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Początkowa wersja",
+				"zh-cn": "初始版本"
+			}
+		},
+		"title": "Rain Bird irrigation control",
+		"titleLang": {
+			"en": "Rain Bird irrigation control"
+		},
+		"desc": {
+			"en": "Adapter to communicate with a Rain Bird irrigation controller and LNK WiFi module attached"
+		},
+		"authors": [
+			"Marius Burkard <m.burkard@pixcept.de>"
+		],
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"mode": "daemon",
+		"icon": "rainbird.png",
+		"extIcon": "https://raw.githubusercontent.com/StrathCole/ioBroker.rainbird/master/admin/rainbird.png",
+		"keywords": [
+			"rain bird",
+			"irrigation",
+			"water",
+			"garden"
+		],
+		"readme": "https://github.com/StrathCole/ioBroker.rainbird/blob/master/README.md",
+		"loglevel": "info",
+		"type": "garden",
+		"license": "MIT",
+		"messagebox": true,
+		"materialize": true,
+		"enabled": false,
+		"compact": true,
+		"dependencies": [
+		]
+	},
+	"native": {
+		"password": "",
+		"pollInterval": 20
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Adapter-Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Whether the adapter is connected to the gateway",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
