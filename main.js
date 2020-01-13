@@ -226,7 +226,7 @@ function pollStates() {
 			let idx = 'device.stations.' + s + '.available';
 			setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
 			setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
-			setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', 5, '', 'number', 'level');
+			setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
 		}
 	});
 	
@@ -308,10 +308,8 @@ function processStateChange(id, value) {
 			found = id.match(/^device\.stations\.(\d+)\.runZone$/);
 			if(found) {
 				controller.cmdRunZone(found[1], value, function(result) {
-					if(result) {
-						adapter.setState(id, value, true);
-						pollStates();
-					}
+					adapter.setState(id, null, true);
+					pollStates();
 				});
 			}
 		}
