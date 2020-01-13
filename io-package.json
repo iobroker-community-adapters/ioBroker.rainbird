@@ -18,10 +18,28 @@
 		},
 		"title": "Rain Bird irrigation control",
 		"titleLang": {
-			"en": "Rain Bird irrigation control"
+			"en": "Rain Bird irrigation control",
+			"de": "Bewässerungssteuerung für Rain Bird",
+			"ru": "Контроль орошения Rain Bird",
+			"pt": "Controle de irrigação Rain Bird",
+			"nl": "Rain Bird irrigatiecontrole",
+			"fr": "Contrôle de l'irrigation Rain Bird",
+			"it": "Controllo dell'irrigazione Rain Bird",
+			"es": "Control de riego Rain Bird",
+			"pl": "Kontrola nawadniania Rain Bird",
+			"zh-cn": "雨鸟灌溉控制"
 		},
 		"desc": {
-			"en": "Adapter to communicate with a Rain Bird irrigation controller and LNK WiFi module attached"
+			"en": "Adapter to communicate with a Rain Bird irrigation controller and LNK WiFi module attached",
+			"de": "Adapter für die Kommunikation mit einem Rain Bird-Bewässerungscontroller und einem angeschlossenen LNK-WiFi-Modul",
+			"ru": "Адаптер для связи с контроллером полива Rain Bird и подключенным модулем LNK WiFi",
+			"pt": "Adaptador para se comunicar com um controlador de irrigação Rain Bird e o módulo WiFi LNK conectado",
+			"nl": "Adapter om te communiceren met een Rain Bird-irrigatiecontroller en bevestigde LNK WiFi-module",
+			"fr": "Adaptateur pour communiquer avec un contrôleur d'irrigation Rain Bird et un module WiFi LNK attaché",
+			"it": "Adattatore per comunicare con un programmatore di irrigazione Rain Bird e un modulo WiFi LNK collegato",
+			"es": "Adaptador para comunicarse con un controlador de riego Rain Bird y un módulo WiFi LNK conectado",
+			"pl": "Dołączony adapter do komunikacji z kontrolerem nawadniania Rain Bird i modułem WiFi LNK",
+			"zh-cn": "与雨鸟灌溉控制器和连接的LNK WiFi模块通信的适配器"
 		},
 		"authors": [
 			"Marius Burkard <m.burkard@pixcept.de>"

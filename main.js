@@ -176,12 +176,17 @@ function main() {
 
 	adapter.subscribeStates('*');
 	
-	controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword);
+	setOrUpdateState('device.commands.advanceZone', 'Advance irrigation zone', false, '', 'boolean', 'button.next');
+	setOrUpdateState('device.commands.runProgram', 'Run program manually', null, '', 'number', 'level');
+	setOrUpdateState('device.commands.stopIrrigation', 'Stop irrigation', false, '', 'boolean', 'button.stop');
+	
+	controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, adapter);
 	
 	pollStates();
 }
 
 function pollStates() {
+	adapter.log.debug('Starting state polling');
 	if(polling) {
 		clearTimeout(polling);
 		polling = null;
@@ -192,6 +197,59 @@ function pollStates() {
 		setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
 		setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
 	});
+
+	controller.getSerialNumber(function(result) {
+		setOrUpdateState('device.serial', 'Serial number', result, '', 'string', 'text');
+	});
+	
+	controller.getCurrentDate(function(result) {
+		let dt = result['year'] + '-' + result['month'] + '-' + result['day'];
+		controller.getCurrentTime(function(result) {
+			dt += ' ' + result['hour'] + ':' + result['minute'] + ':' + result['second'];
+			setOrUpdateState('device.datetime', 'Current date/time', (new Date(dt)).getTime(), '', 'number', 'date');
+		});
+	});
+	
+	controller.getCurrentIrrigation(function(result) {
+		setOrUpdateState('device.irrigation.active', 'Irrigation active', result, '', 'boolean', 'indicator.active');
+	});
+	
+	controller.getRainDelay(function(result) {
+		setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
+	});
+	
+	controller.getAvailableStations(0, function(result) {
+		let s;
+		for(let i = 0; i < result.states.length; i++) {
+			s = i + 1;
+			let avail = (result.states[i] ? true : false);
+			let idx = 'device.stations.' + s + '.available';
+			setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
+			setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
+			setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', 5, '', 'number', 'level');
+		}
+	});
+	
+	controller.getZoneState(null, 0, function(result) {
+		let s;
+		let irriStation = false;
+		for(let i = 0; i < result.length; i++) {
+			s = i + 1;
+			let active = (result[i] ? true : false);
+			if(active) {
+				irriStation = s;
+			}
+			let idx = 'device.stations.' + s + '.irrigation';
+			setOrUpdateState(idx, 'Station ' + s + ' irrigation', active, '', 'boolean', 'indicator.active');
+		}
+		setOrUpdateState('device.irrigation.station', 'Irrigation on station', irriStation ? irriStation : null, '', 'number', 'value.station');
+	});
+	
+	controller.getRainSensorState(function(result) {
+		setOrUpdateState('device.sensors.rain', 'Rain detected', result, '', 'boolean', 'indicator.rain');
+	});
+
+			
 	
 	
 	polling = setTimeout(function() {
@@ -208,9 +266,73 @@ function processStateChangeForeign(id, state) {
 }
 
 function processStateChange(id, value) {
-
+	adapter.log.debug('StateChange: ' + JSON.stringify([id, value]));
 	
-	adapter.log.info('StateChange: ' + JSON.stringify([id, value]));
+	if(id === 'device.commands.advanceZone') {
+		controller.cmdAdvanceZone(function(result) {
+			if(result) {
+				adapter.setState(id, value, true);
+				pollStates();
+			}
+		});
+	} else if(id === 'device.commands.runProgram') {
+		controller.cmdRunProgram(value, function(result) {
+			if(result) {
+				adapter.setState(id, value, true);
+				pollStates();
+			}
+		});
+	} else if(id === 'device.commands.stopIrrigation') {
+		controller.cmdStopIrrigation(function(result) {
+			if(result) {
+				adapter.setState(id, value, true);
+				pollStates();
+			}
+		});
+	} else if(id === 'device.settings.rainDelay') {
+		controller.setRainDelay(function(result) {
+			if(result) {
+				adapter.setState(id, value, true);
+			}
+		});
+	} else {
+		let found = id.match(/^device\.stations\.(\d+)\.testZone$/);
+		if(found) {
+			controller.cmdTestZone(found[1], function(result) {
+				if(result) {
+					adapter.setState(id, value, true);
+					pollStates();
+				}
+			});
+		} else {
+			found = id.match(/^device\.stations\.(\d+)\.runZone$/);
+			if(found) {
+				controller.cmdRunZone(found[1], function(result) {
+					if(result) {
+						adapter.setState(id, value, true);
+						pollStates();
+					}
+				});
+			}
+		}
+	}
 	
 	return;
 }
+
+function decrypt(key, value) {
+	var result = '';
+	for(var i = 0; i < value.length; ++i) {
+			result += String.fromCharCode(key[i % key.length].charCodeAt(0) ^ value.charCodeAt(i));
+	}
+	return result;
+}
+
+
+// If started as allInOne/compact mode => return function to create instance
+if(module && module.parent) {
+        module.exports = startAdapter;
+} else {
+        // or start the instance directly
+        startAdapter();
+} // endElse
