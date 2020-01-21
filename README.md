@@ -6,12 +6,39 @@
 
 # ioBroker.rainbird
 
-
 An ioBroker adapter for Rain Bird with LNK WiFi adapter. This project has no affiliation with Rain Bird.
 
-Based on the python library "pyrainbird" from https://github.com/jbarrancos/pyrainbird and completely ported to NodeJS.
+Based on the python library "pyrainbird" from https://github.com/jbarrancos/pyrainbird and completely ported to NodeJS. The adapter makes a direct connection to the device through WiFi connection and is not using the Rain Bird cloud service.
+
+
+## States
+
+`rainbird.X.device.commands.advanceZone` - When current program is running, advance to the next irrigation zone and stop the current one.  
+`rainbird.X.device.commands.runProgram` - Run the specified program manually (1 to X) as previously configured in the device.  
+`rainbird.X.device.commands.stopIrrigation` - Immediately stop the irrigation in all zones.  
+
+`rainbird.X.device.irrigation.active` - The irrigation is currently active. If false this can mean that you set the switch on the device to "Stop".  
+`rainbird.X.device.irrigation.station` - Number of the zone that is currently irrigated.  
+
+`rainbird.X.device.sensors.rain` - True if a rain sensor is attached and rain is detected.  
+
+`rainbird.X.device.settings.rainDelay` - The current irrigation delay (in days) set for the device.  
+
+`rainbird.X.device.stations.Y.available` - True if zone Y is available in the device.  
+`rainbird.X.device.stations.Y.irrigation` - True if zone Y is currently irrigated.  
+`rainbird.X.device.stations.Y.runZone` - Manually run irrigation on zone Y for the specified amount of minutes.  
+`rainbird.X.device.stations.Y.testZone` - Test zone Y.  
+
 
 ## Changelog
+
+### 0.1.2
+
+-   Fixed adapter stalling on connection timeout
+
+### 0.1.1
+
+-   Smaller fixes
 
 ### 0.1.0
 

@@ -1,8 +1,32 @@
 {
 	"common": {
 		"name": "rainbird",
-		"version": "0.1.1",
+		"version": "0.1.2",
 		"news": {
+			"0.1.2": {
+				"en": "Fixed adapter stalling on connection timeout",
+				"de": "Problem behoben, durch das der Adapter bei einem Verbindungs-Timeout blockierte",
+				"ru": "Исправлено зависание адаптера при тайм-ауте соединения",
+				"pt": "Corrigido o bloqueio do adaptador no tempo limite da conexão",
+				"nl": "Vaste adapter loopt vast bij time-out van de verbinding",
+				"fr": "Adaptateur fixe bloquant lors de l'expiration de la connexion",
+				"it": "Corretto lo stallo dell'adattatore al timeout della connessione",
+				"es": "Se corrigió el bloqueo del adaptador en el tiempo de espera de conexión",
+				"pl": "Naprawiono blokowanie adaptera po przekroczeniu limitu czasu połączenia",
+				"zh-cn": "修复了连接超时时适配器停顿的问题"
+			},
+			"0.1.1": {
+				"en": "Smaller fixes",
+				"de": "Kleinere Korrekturen",
+				"ru": "Небольшие исправления",
+				"pt": "Correções menores",
+				"nl": "Kleinere oplossingen",
+				"fr": "Corrections plus petites",
+				"it": "Piccole correzioni",
+				"es": "Pequeñas correcciones",
+				"pl": "Mniejsze poprawki",
+				"zh-cn": "较小的修复"
+			},
 			"0.1.0": {
 				"en": "Initial version",
 				"de": "Initiale Version",
@@ -58,6 +82,7 @@
 		"readme": "https://github.com/StrathCole/ioBroker.rainbird/blob/master/README.md",
 		"loglevel": "info",
 		"type": "garden",
+		"connection-type": "local polling",
 		"license": "MIT",
 		"messagebox": true,
 		"materialize": true,
@@ -67,8 +92,9 @@
 		]
 	},
 	"native": {
+		"ipaddress": "",
 		"password": "",
-		"pollInterval": 20
+		"pollinterval": 20000
 	},
 	"objects": [],
 	"instanceObjects": [
