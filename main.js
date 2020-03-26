@@ -182,7 +182,7 @@ function pollStates() {
 			let idx = 'device.stations.' + s + '.irrigation';
 			ioBLib.setOrUpdateState(idx, 'Station ' + s + ' irrigation', active, '', 'boolean', 'indicator.active');
 		}
-		ioBLib.setOrUpdateState('device.irrigation.station', 'Irrigation on station', irriStation ? irriStation : null, '', 'number', 'value.station');
+		ioBLib.setOrUpdateState('device.irrigation.station', 'Irrigation on station', irriStation ? irriStation : 0, '', 'number', 'value.station');
 	});
 
 	controller.getRainSensorState(function(result) {
