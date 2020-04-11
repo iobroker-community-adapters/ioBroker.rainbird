@@ -31,11 +31,17 @@ Based on the python library "pyrainbird" from https://github.com/jbarrancos/pyra
 
 `rainbird.X.device.stations.Y.available` - True if zone Y is available in the device.  
 `rainbird.X.device.stations.Y.irrigation` - True if zone Y is currently irrigated.  
+`rainbird.X.device.stations.Y.remaining` - Remaining irrigation time in seconds
 `rainbird.X.device.stations.Y.runZone` - Manually run irrigation on zone Y for the specified amount of minutes.  
 `rainbird.X.device.stations.Y.testZone` - Test zone Y.  
 
 
 ## Changelog
+
+### 0.2.0
+
+-   Added remaining irrigation time of zone
+-   Fixed bug in decoding responses
 
 ### 0.1.2
 
