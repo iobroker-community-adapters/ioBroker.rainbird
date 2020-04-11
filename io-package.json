@@ -1,8 +1,20 @@
 {
 	"common": {
 		"name": "rainbird",
-		"version": "0.1.2",
+		"version": "0.2.0",
 		"news": {
+			"0.2.0": {
+				"en": "Added remaining irrigation time of zone\nFixed bug in decoding responses",
+				"de": "Verbleibende Bewässerungszeit der Zone hinzugefügt\nFehler beim Dekodieren von Antworten behoben",
+				"ru": "Добавлено оставшееся время полива зоны\nИсправлена ошибка в расшифровке ответов",
+				"pt": "Adicionado tempo de irrigação restante da zona\nCorrigido o erro nas respostas de decodificação",
+				"nl": "Resterende irrigatietijd van zone toegevoegd\nBug opgelost bij het decoderen van reacties",
+				"fr": "Ajout du temps d'irrigation restant de la zone\nCorrection d'un bug dans le décodage des réponses",
+				"it": "Aggiunto il tempo di irrigazione residuo della zona\nBug risolto nelle risposte di decodifica",
+				"es": "Se agregó el tiempo de riego restante de la zona\nSe corrigió el error en las respuestas de decodificación",
+				"pl": "Dodano pozostały czas nawadniania strefy\nNaprawiono błąd w odpowiedziach na dekodowanie",
+				"zh-cn": "增加了区域的剩余灌溉时间\n修复了解码响应中的错误"
+			},
 			"0.1.2": {
 				"en": "Fixed adapter stalling on connection timeout",
 				"de": "Problem behoben, durch das der Adapter bei einem Verbindungs-Timeout blockierte",

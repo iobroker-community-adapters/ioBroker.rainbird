@@ -170,7 +170,7 @@ function pollStates() {
 		}
 	});
 
-	controller.getZoneState(null, 0, function(result) {
+	controller.getZoneState(null, 0, function(result, runtime) {
 		let s;
 		let irriStation = false;
 		for(let i = 0; i < result.length; i++) {
@@ -178,19 +178,21 @@ function pollStates() {
 			let active = (result[i] ? true : false);
 			if(active) {
 				irriStation = s;
+			} else {
+				ioBLib.setOrUpdateState('device.stations.' + s + '.remaining', 'Remaining run time for station ' + s, 0, 's', 'number', 'value');
 			}
 			let idx = 'device.stations.' + s + '.irrigation';
 			ioBLib.setOrUpdateState(idx, 'Station ' + s + ' irrigation', active, '', 'boolean', 'indicator.active');
 		}
 		ioBLib.setOrUpdateState('device.irrigation.station', 'Irrigation on station', irriStation ? irriStation : 0, '', 'number', 'value.station');
+		if(runtime) {
+			ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], runtime['seconds'], 's', 'number', 'value');
+		}
 	});
 
 	controller.getRainSensorState(function(result) {
 		ioBLib.setOrUpdateState('device.sensors.rain', 'Rain detected', result, '', 'boolean', 'indicator.rain');
 	});
-
-
-
 
 	polling = setTimeout(function() {
 		pollStates();
