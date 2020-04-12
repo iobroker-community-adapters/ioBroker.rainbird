@@ -5,7 +5,11 @@ const ioBLib = require('@strathcole/iob-lib').ioBLib;
 
 const rainbird = require('./lib/rainbird');
 
-const adapterName = require('./package.json').name.split('.').pop();
+const packageJson = require('./package.json');
+const adapterName = packageJson.name.split('.').pop();
+const adapterVersion = packageJson.version;
+
+const patchVersion = 'r34';
 
 let adapter;
 var deviceIpAdress;
@@ -83,7 +87,7 @@ function startAdapter(options) {
 		} else if(!adapter.config.password) {
 			adapter.log.warn('[START] Password not set');
 		} else {
-			adapter.log.info('[START] Starting Rain Bird adapter');
+			adapter.log.info('[START] Starting Rain Bird adapter V' + adapterVersion + '' + patchVersion);
 			adapter.setState('info.connection', true, true);
 			adapter.getForeignObject('system.config', (err, obj) => {
 				if (obj && obj.native && obj.native.secret) {
@@ -138,12 +142,13 @@ function pollStates() {
 	if(!lastFullPolling || lastFullPolling < now - (10 * 60 * 1000)) {
 		all = true;
 	}
+	lastFullPolling = now;
 
 	if(all) {
 		controller.getModelAndVersion(function(result) {
 			ioBLib.setOrUpdateState('device.model', 'Model', result['model'], '', 'string', 'text');
 			deviceModelId = result['model'];
-			
+
 			ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
 			ioBLib.setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
 		});

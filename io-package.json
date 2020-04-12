@@ -1,8 +1,20 @@
 {
 	"common": {
 		"name": "rainbird",
-		"version": "0.2.0",
+		"version": "0.2.1",
 		"news": {
+			"0.2.1": {
+				"en": "Added support for run times on different controller model\nLess polling for some states to reduce requests to controller",
+				"de": "Unterstützung für Laufzeiten auf anderem Controller-Modell hinzugefügt\nWeniger Abfragen für einige Datenpunkte, um Anforderungen an den Controller zu reduzieren\n",
+				"ru": "Добавлена поддержка времени выполнения на другой модели контроллера\nМеньше опроса для некоторых штатов, чтобы уменьшить количество запросов к контроллеру\n",
+				"pt": "Adicionado suporte para tempos de execução em diferentes modelos de controladores\nMenos pesquisas para alguns estados para reduzir solicitações ao controlador\n",
+				"nl": "Ondersteuning toegevoegd voor looptijden op verschillende controllermodellen\nMinder polling voor sommige staten om verzoeken aan de controller te verminderen\n",
+				"fr": "Ajout de la prise en charge des temps d'exécution sur différents modèles de contrôleurs\nMoins d'interrogation pour certains États afin de réduire les demandes au contrôleur\n",
+				"it": "Aggiunto supporto per i tempi di esecuzione su diversi modelli di controller\nMeno polling per alcuni stati per ridurre le richieste al controller\n",
+				"es": "Se agregó soporte para tiempos de ejecución en diferentes modelos de controlador\nMenos encuestas para algunos estados para reducir las solicitudes al controlador\n",
+				"pl": "Dodano obsługę czasów uruchamiania dla różnych modeli kontrolerów\nMniejsze sondowanie w niektórych stanach w celu ograniczenia żądań do kontrolera\n",
+				"zh-cn": "增加了对不同控制器型号上运行时间的支持\n减少某些状态的轮询，以减少对控制器的请求\n"
+			},
 			"0.2.0": {
 				"en": "Added remaining irrigation time of zone\nFixed bug in decoding responses",
 				"de": "Verbleibende Bewässerungszeit der Zone hinzugefügt\nFehler beim Dekodieren von Antworten behoben",
