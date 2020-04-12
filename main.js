@@ -11,8 +11,11 @@ let adapter;
 var deviceIpAdress;
 var devicePassword;
 
+let deviceModelId;
+
 let polling;
 let pollingTime;
+let lastFullPolling;
 let controller;
 
 function startAdapter(options) {
@@ -130,23 +133,47 @@ function pollStates() {
 		polling = null;
 	}
 
-	controller.getModelAndVersion(function(result) {
-		ioBLib.setOrUpdateState('device.model', 'Model', result['model'], '', 'string', 'text');
-		ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
-		ioBLib.setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
-	});
+	let all = false;
+	let now = (new Date()).getTime();
+	if(!lastFullPolling || lastFullPolling < now - (10 * 60 * 1000)) {
+		all = true;
+	}
 
-	controller.getSerialNumber(function(result) {
-		ioBLib.setOrUpdateState('device.serial', 'Serial number', result, '', 'string', 'text');
-	});
-
-	controller.getCurrentDate(function(result) {
-		let dt = result['year'] + '-' + result['month'] + '-' + result['day'];
-		controller.getCurrentTime(function(result) {
-			dt += ' ' + result['hour'] + ':' + result['minute'] + ':' + result['second'];
-			ioBLib.setOrUpdateState('device.datetime', 'Current date/time', (new Date(dt)).getTime(), '', 'number', 'date');
+	if(all) {
+		controller.getModelAndVersion(function(result) {
+			ioBLib.setOrUpdateState('device.model', 'Model', result['model'], '', 'string', 'text');
+			deviceModelId = result['model'];
+			
+			ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
+			ioBLib.setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
 		});
-	});
+
+		controller.getSerialNumber(function(result) {
+			ioBLib.setOrUpdateState('device.serial', 'Serial number', result, '', 'string', 'text');
+		});
+
+		controller.getCurrentDate(function(result) {
+			let dt = result['year'] + '-' + result['month'] + '-' + result['day'];
+			controller.getCurrentTime(function(result) {
+				dt += ' ' + result['hour'] + ':' + result['minute'] + ':' + result['second'];
+				ioBLib.setOrUpdateState('device.datetime', 'Current date/time', (new Date(dt)).getTime(), '', 'number', 'date');
+			});
+		});
+
+		controller.getAvailableStations(0, function(result) {
+			let s;
+			for(let i = 0; i < result.states.length; i++) {
+				s = i + 1;
+				let avail = (result.states[i] ? true : false);
+				let idx = 'device.stations.' + s + '.available';
+				ioBLib.setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
+				if(avail) {
+					ioBLib.setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
+					ioBLib.setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
+				}
+			}
+		});
+	}
 
 	controller.getCurrentIrrigation(function(result) {
 		ioBLib.setOrUpdateState('device.irrigation.active', 'Irrigation active', result, '', 'boolean', 'indicator.active');
@@ -154,20 +181,6 @@ function pollStates() {
 
 	controller.getRainDelay(function(result) {
 		ioBLib.setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
-	});
-
-	controller.getAvailableStations(0, function(result) {
-		let s;
-		for(let i = 0; i < result.states.length; i++) {
-			s = i + 1;
-			let avail = (result.states[i] ? true : false);
-			let idx = 'device.stations.' + s + '.available';
-			ioBLib.setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
-			if(avail) {
-				ioBLib.setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
-				ioBLib.setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
-			}
-		}
 	});
 
 	controller.getZoneState(null, 0, function(result, runtime) {
@@ -240,7 +253,10 @@ function processStateChange(id, value) {
 			});
 		} else {
 			found = id.match(/^device\.stations\.(\d+)\.runZone$/);
-			if(found) {
+			if(found && value > 0) {
+				if(value > 120) {
+					value = 120;
+				}
 				controller.cmdRunZone(found[1], value, function(result) {
 					adapter.setState(id, null, true);
 					pollStates();
