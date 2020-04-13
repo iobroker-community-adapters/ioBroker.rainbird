@@ -9,7 +9,7 @@ const packageJson = require('./package.json');
 const adapterName = packageJson.name.split('.').pop();
 const adapterVersion = packageJson.version;
 
-const patchVersion = 'r34';
+const patchVersion = 'r35';
 
 let adapter;
 var deviceIpAdress;
@@ -131,7 +131,6 @@ function main() {
 }
 
 function pollStates() {
-	adapter.log.debug('Starting state polling');
 	if(polling) {
 		clearTimeout(polling);
 		polling = null;
@@ -143,11 +142,13 @@ function pollStates() {
 		all = true;
 	}
 	lastFullPolling = now;
+	adapter.log.debug('Starting state polling with full=' + all);
 
 	if(all) {
 		controller.getModelAndVersion(function(result) {
 			ioBLib.setOrUpdateState('device.model', 'Model', result['model'], '', 'string', 'text');
 			deviceModelId = result['model'];
+			controller.setDeviceModelId(deviceModelId);
 
 			ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
 			ioBLib.setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
