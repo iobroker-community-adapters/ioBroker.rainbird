@@ -215,7 +215,7 @@ function pollStates() {
 		if(runtime) {
 			ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], runtime['seconds'], 's', 'number', 'value');
 			remainingRuntime = runtime['seconds'];
-			remainingTimer = createInterval(function() {
+			remainingTimer = setInterval(function() {
 				remainingRuntime--;
 				if(remainingRuntime < 0) {
 					clearInterval(remainingTimer);
