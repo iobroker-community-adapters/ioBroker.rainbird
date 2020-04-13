@@ -9,7 +9,7 @@ const packageJson = require('./package.json');
 const adapterName = packageJson.name.split('.').pop();
 const adapterVersion = packageJson.version;
 
-const patchVersion = 'r35';
+const patchVersion = 'r36';
 
 let adapter;
 var deviceIpAdress;
@@ -20,6 +20,8 @@ let deviceModelId;
 let polling;
 let pollingTime;
 let lastFullPolling;
+let remainingTimer;
+let remainingRuntime;
 let controller;
 
 function startAdapter(options) {
@@ -35,7 +37,9 @@ function startAdapter(options) {
 		if(polling) {
 			clearTimeout(polling);
 		}
-
+		if(remainingTimer) {
+			clearInterval(remainingTimer);
+		}
 		adapter.setState('info.connection', false, true);
 		callback();
 	});
@@ -192,6 +196,10 @@ function pollStates() {
 	controller.getZoneState(null, 0, function(result, runtime) {
 		let s;
 		let irriStation = false;
+		if(remainingTimer) {
+			clearInterval(remainingTimer);
+		}
+
 		for(let i = 0; i < result.length; i++) {
 			s = i + 1;
 			let active = (result[i] ? true : false);
@@ -206,6 +214,15 @@ function pollStates() {
 		ioBLib.setOrUpdateState('device.irrigation.station', 'Irrigation on station', irriStation ? irriStation : 0, '', 'number', 'value.station');
 		if(runtime) {
 			ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], runtime['seconds'], 's', 'number', 'value');
+			remainingRuntime = runtime['seconds'];
+			remainingTimer = createInterval(function() {
+				remainingRuntime--;
+				if(remainingRuntime < 0) {
+					clearInterval(remainingTimer);
+					return;
+				}
+				ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], remainingRuntime, 's', 'number', 'value');
+			}, 1000);
 		}
 	});
 
