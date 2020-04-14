@@ -1,8 +1,20 @@
 {
 	"common": {
 		"name": "rainbird",
-		"version": "0.2.1",
+		"version": "0.2.2",
 		"news": {
+			"0.2.2": {
+				"en": "Added fixes for adapter crashes on failed connection to controller",
+				"de": "Korrekturen für Adapterabstürze bei fehlgeschlagener Verbindung zum Controller hinzugefügt",
+				"ru": "Добавлены исправления для сбоев адаптера при сбое подключения к контроллеру",
+				"pt": "Correções adicionadas para falhas do adaptador em falha na conexão com o controlador",
+				"nl": "Er zijn oplossingen toegevoegd voor adaptercrashes bij een mislukte verbinding met de controller",
+				"fr": "Ajout de correctifs pour les plantages de l'adaptateur en cas d'échec de connexion au contrôleur",
+				"it": "Aggiunte correzioni per crash dell'adattatore in caso di connessione fallita al controller",
+				"es": "Se agregaron correcciones para fallas del adaptador al fallar la conexión al controlador",
+				"pl": "Dodano poprawki awarii adaptera w przypadku nieudanego połączenia ze sterownikiem",
+				"zh-cn": "添加了针对适配器与控制器连接失败时崩溃的修复程序"
+			},
 			"0.2.1": {
 				"en": "Added support for run times on different controller model\nLess polling for some states to reduce requests to controller",
 				"de": "Unterstützung für Laufzeiten auf anderem Controller-Modell hinzugefügt\nWeniger Abfragen für einige Datenpunkte, um Anforderungen an den Controller zu reduzieren\n",

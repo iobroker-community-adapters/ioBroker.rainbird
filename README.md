@@ -38,6 +38,10 @@ Based on the python library "pyrainbird" from https://github.com/jbarrancos/pyra
 
 ## Changelog
 
+### 0.2.2
+
+-   Added fixes for adapter crashes on failed connection to controller
+
 ### 0.2.1
 
 -   Added support for run times on different controller model
