@@ -9,7 +9,7 @@ const packageJson = require('./package.json');
 const adapterName = packageJson.name.split('.').pop();
 const adapterVersion = packageJson.version;
 
-const patchVersion = 'r37';
+const patchVersion = 'r38';
 
 let adapter;
 var deviceIpAdress;
@@ -150,50 +150,68 @@ function pollStates() {
 
 	if(all) {
 		controller.getModelAndVersion(function(result) {
-			ioBLib.setOrUpdateState('device.model', 'Model', result['model'], '', 'string', 'text');
-			deviceModelId = result['model'];
-			controller.setDeviceModelId(deviceModelId);
+			if(result) {
+				ioBLib.setOrUpdateState('device.model', 'Model', result['model'], '', 'string', 'text');
+				deviceModelId = result['model'];
+				controller.setDeviceModelId(deviceModelId);
 
-			ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
-			ioBLib.setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
+				ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
+				ioBLib.setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
+			}
 		});
 
 		controller.getSerialNumber(function(result) {
-			ioBLib.setOrUpdateState('device.serial', 'Serial number', result, '', 'string', 'text');
+			if(result) {
+				ioBLib.setOrUpdateState('device.serial', 'Serial number', result, '', 'string', 'text');
+			}
 		});
 
 		controller.getCurrentDate(function(result) {
-			let dt = result['year'] + '-' + result['month'] + '-' + result['day'];
-			controller.getCurrentTime(function(result) {
-				dt += ' ' + result['hour'] + ':' + result['minute'] + ':' + result['second'];
-				ioBLib.setOrUpdateState('device.datetime', 'Current date/time', (new Date(dt)).getTime(), '', 'number', 'date');
-			});
+			if(result) {
+				let dt = result['year'] + '-' + result['month'] + '-' + result['day'];
+				controller.getCurrentTime(function(result) {
+					if(result) {
+						dt += ' ' + result['hour'] + ':' + result['minute'] + ':' + result['second'];
+						ioBLib.setOrUpdateState('device.datetime', 'Current date/time', (new Date(dt)).getTime(), '', 'number', 'date');
+					}
+				});
+			}
 		});
 
 		controller.getAvailableStations(0, function(result) {
-			let s;
-			for(let i = 0; i < result.states.length; i++) {
-				s = i + 1;
-				let avail = (result.states[i] ? true : false);
-				let idx = 'device.stations.' + s + '.available';
-				ioBLib.setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
-				if(avail) {
-					ioBLib.setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
-					ioBLib.setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
+			if(result) {
+				let s;
+				for(let i = 0; i < result.states.length; i++) {
+					s = i + 1;
+					let avail = (result.states[i] ? true : false);
+					let idx = 'device.stations.' + s + '.available';
+					ioBLib.setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
+					if(avail) {
+						ioBLib.setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
+						ioBLib.setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
+					}
 				}
 			}
 		});
 	}
 
 	controller.getCurrentIrrigation(function(result) {
-		ioBLib.setOrUpdateState('device.irrigation.active', 'Irrigation active', result, '', 'boolean', 'indicator.active');
+		if(result) {
+			ioBLib.setOrUpdateState('device.irrigation.active', 'Irrigation active', result, '', 'boolean', 'indicator.active');
+		}
 	});
 
 	controller.getRainDelay(function(result) {
-		ioBLib.setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
+		if(result) {
+			ioBLib.setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
+		}
 	});
 
 	controller.getZoneState(null, 0, function(result, runtime) {
+		if(!result) {
+			return;
+		}
+
 		let s;
 		let irriStation = false;
 		if(remainingTimer) {
@@ -227,7 +245,9 @@ function pollStates() {
 	});
 
 	controller.getRainSensorState(function(result) {
-		ioBLib.setOrUpdateState('device.sensors.rain', 'Rain detected', result, '', 'boolean', 'indicator.rain');
+		if(result) {
+			ioBLib.setOrUpdateState('device.sensors.rain', 'Rain detected', result, '', 'boolean', 'indicator.rain');
+		}
 	});
 
 	polling = setTimeout(function() {
