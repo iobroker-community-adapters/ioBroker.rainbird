@@ -3,6 +3,9 @@
 		"name": "rainbird",
 		"version": "0.2.3",
 		"news": {
+			"0.2.3": {
+				"en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information"
+			},
 			"0.2.2": {
 				"en": "Added fixes for adapter crashes on failed connection to controller",
 				"de": "Korrekturen für Adapterabstürze bei fehlgeschlagener Verbindung zum Controller hinzugefügt",

@@ -9,7 +9,7 @@ const packageJson = require('./package.json');
 const adapterName = packageJson.name.split('.').pop();
 const adapterVersion = packageJson.version;
 
-const patchVersion = 'r41';
+const patchVersion = 'r42';
 
 let adapter;
 var deviceIpAdress;
@@ -204,8 +204,8 @@ function pollStates() {
 	});
 
 	controller.cmdWaterBudget(0, function(result) {
-		if(result && 'seasonalAdjust' in result) {
-			ioBLib.setOrUpdateState('device.settings.seasonalAdjust', 'Irrigation seasonal adjustment', result['seasonalAdjust'], '%', 'number', 'value');
+		if(result && 'adjust' in result) {
+			ioBLib.setOrUpdateState('device.settings.seasonalAdjust', 'Irrigation seasonal adjustment', result['adjust'], '%', 'number', 'value');
 		}
 	});
 
