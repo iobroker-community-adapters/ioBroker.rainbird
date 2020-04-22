@@ -9,7 +9,7 @@ const packageJson = require('./package.json');
 const adapterName = packageJson.name.split('.').pop();
 const adapterVersion = packageJson.version;
 
-const patchVersion = 'r40';
+const patchVersion = 'r41';
 
 let adapter;
 var deviceIpAdress;
@@ -196,14 +196,16 @@ function pollStates() {
 	}
 
 	controller.getCurrentIrrigation(function(result) {
-		if(result) {
-			ioBLib.setOrUpdateState('device.irrigation.active', 'Irrigation active', result, '', 'boolean', 'indicator.active');
-		}
+		ioBLib.setOrUpdateState('device.irrigation.active', 'Irrigation active', result, '', 'boolean', 'indicator.active');
 	});
 
 	controller.getRainDelay(function(result) {
-		if(result) {
-			ioBLib.setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
+		ioBLib.setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
+	});
+
+	controller.cmdWaterBudget(0, function(result) {
+		if(result && 'seasonalAdjust' in result) {
+			ioBLib.setOrUpdateState('device.settings.seasonalAdjust', 'Irrigation seasonal adjustment', result['seasonalAdjust'], '%', 'number', 'value');
 		}
 	});
 
@@ -245,9 +247,7 @@ function pollStates() {
 	});
 
 	controller.getRainSensorState(function(result) {
-		if(result) {
-			ioBLib.setOrUpdateState('device.sensors.rain', 'Rain detected', result, '', 'boolean', 'indicator.rain');
-		}
+		ioBLib.setOrUpdateState('device.sensors.rain', 'Rain detected', result, '', 'boolean', 'indicator.rain');
 	});
 
 	polling = setTimeout(function() {
