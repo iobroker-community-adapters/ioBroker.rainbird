@@ -206,7 +206,9 @@ function pollStates() {
 	});
 
 	controller.getRainDelay(function(result) {
-		ioBLib.setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
+		if(result !== false) {
+			ioBLib.setOrUpdateState('device.settings.rainDelay', 'Irrigation delay', result, 'days', 'number', 'level.delay');
+		}
 	});
 
 	controller.cmdWaterBudget(0, function(result) {
