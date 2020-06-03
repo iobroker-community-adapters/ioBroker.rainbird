@@ -4,7 +4,7 @@
 		"version": "0.2.3",
 		"news": {
 			"0.2.3": {
-				"en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information"
+				"en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information\nOnly show datapoints for available stations"
 			},
 			"0.2.2": {
 				"en": "Added fixes for adapter crashes on failed connection to controller",

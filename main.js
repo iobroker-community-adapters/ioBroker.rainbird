@@ -9,7 +9,7 @@ const packageJson = require('./package.json');
 const adapterName = packageJson.name.split('.').pop();
 const adapterVersion = packageJson.version;
 
-const patchVersion = 'r42';
+const patchVersion = 'r44';
 
 let adapter;
 var deviceIpAdress;
@@ -23,6 +23,8 @@ let lastFullPolling;
 let remainingTimer;
 let remainingRuntime;
 let controller;
+
+let availableStations = [];
 
 function startAdapter(options) {
 	options = options || {};
@@ -180,15 +182,19 @@ function pollStates() {
 
 		controller.getAvailableStations(0, function(result) {
 			if(result) {
+				availableStations = [];
 				let s;
 				for(let i = 0; i < result.states.length; i++) {
 					s = i + 1;
 					let avail = (result.states[i] ? true : false);
 					let idx = 'device.stations.' + s + '.available';
-					ioBLib.setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
 					if(avail) {
+						availableStations.push(s);
+						ioBLib.setOrUpdateState(idx, 'Station ' + s + ' available', avail, '', 'boolean', 'indicator.available');
 						ioBLib.setOrUpdateState('device.stations.' + s + '.testZone', 'Test single zone', false, '', 'boolean', 'button.start');
 						ioBLib.setOrUpdateState('device.stations.' + s + '.runZone', 'Run zone for X minutes', null, '', 'number', 'level');
+					} else {
+						ioBLib.delObjectIfExists('device.stations.' + s);
 					}
 				}
 			}
@@ -226,23 +232,29 @@ function pollStates() {
 			if(active) {
 				irriStation = s;
 			} else {
-				ioBLib.setOrUpdateState('device.stations.' + s + '.remaining', 'Remaining run time for station ' + s, 0, 's', 'number', 'value');
+				if(availableStations.indexOf(s) > -1) {
+					ioBLib.setOrUpdateState('device.stations.' + s + '.remaining', 'Remaining run time for station ' + s, 0, 's', 'number', 'value');
+				}
 			}
 			let idx = 'device.stations.' + s + '.irrigation';
-			ioBLib.setOrUpdateState(idx, 'Station ' + s + ' irrigation', active, '', 'boolean', 'indicator.active');
+			if(availableStations.indexOf(s) > -1) {
+				ioBLib.setOrUpdateState(idx, 'Station ' + s + ' irrigation', active, '', 'boolean', 'indicator.active');
+			}
 		}
 		ioBLib.setOrUpdateState('device.irrigation.station', 'Irrigation on station', irriStation ? irriStation : 0, '', 'number', 'value.station');
 		if(runtime) {
-			ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], runtime['seconds'], 's', 'number', 'value');
-			remainingRuntime = runtime['seconds'];
-			remainingTimer = setInterval(function() {
-				remainingRuntime--;
-				if(remainingRuntime < 0) {
-					clearInterval(remainingTimer);
-					return;
-				}
-				ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], remainingRuntime, 's', 'number', 'value');
-			}, 1000);
+			if(availableStations.indexOf(runtime['zone']) > -1) {
+				ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], runtime['seconds'], 's', 'number', 'value');
+				remainingRuntime = runtime['seconds'];
+				remainingTimer = setInterval(function() {
+					remainingRuntime--;
+					if(remainingRuntime < 0) {
+						clearInterval(remainingTimer);
+						return;
+					}
+					ioBLib.setOrUpdateState('device.stations.' + runtime['zone'] + '.remaining', 'Remaining run time for station ' + runtime['zone'], remainingRuntime, 's', 'number', 'value');
+				}, 1000);
+			}
 		}
 	});
 
