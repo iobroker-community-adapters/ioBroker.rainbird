@@ -153,12 +153,12 @@ function pollStates() {
 	if(all) {
 		controller.getModelAndVersion(function(result) {
 			if(result) {
-				ioBLib.setOrUpdateState('device.model', 'Model', result['model'], '', 'string', 'text');
+				ioBLib.setOrUpdateState('device.model', 'Model', result['model'].toString(), '', 'string', 'text');
 				deviceModelId = result['model'];
 				controller.setDeviceModelId(deviceModelId);
 
-				ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'], '', 'string', 'text');
-				ioBLib.setOrUpdateState('device.major', 'Major version', result['major'], '', 'string', 'text');
+				ioBLib.setOrUpdateState('device.minor', 'Minor version', result['minor'].toString(), '', 'string', 'text');
+				ioBLib.setOrUpdateState('device.major', 'Major version', result['major'].toString(), '', 'string', 'text');
 			}
 		});
 
