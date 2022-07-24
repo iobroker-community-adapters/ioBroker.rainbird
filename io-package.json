@@ -121,12 +121,13 @@
 		"readme": "https://github.com/StrathCole/ioBroker.rainbird/blob/master/README.md",
 		"loglevel": "info",
 		"type": "garden",
-		"connection-type": "local polling",
 		"license": "MIT",
 		"messagebox": true,
 		"materialize": true,
 		"enabled": false,
 		"compact": true,
+		"connectionType": "local",
+        "dataSource": "poll",
 		"dependencies": [
 		]
 	},
