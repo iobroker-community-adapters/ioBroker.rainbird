@@ -79,7 +79,6 @@
 				"zh-cn": "初始版本"
 			}
 		},
-		"title": "Rain Bird irrigation control",
 		"titleLang": {
 			"en": "Rain Bird irrigation control",
 			"de": "Bewässerungssteuerung für Rain Bird",
@@ -105,20 +104,20 @@
 			"zh-cn": "与雨鸟灌溉控制器和连接的LNK WiFi模块通信的适配器"
 		},
 		"authors": [
-			"Marius Burkard <m.burkard@pixcept.de>"
+			"Marius Burkard <m.burkard@pixcept.de>",
+			"mcm1957 <iobroker-community-adapters@gmx.de>"
 		],
 		"platform": "Javascript/Node.js",
-		"main": "main.js",
 		"mode": "daemon",
 		"icon": "rainbird.png",
-		"extIcon": "https://raw.githubusercontent.com/StrathCole/ioBroker.rainbird/master/admin/rainbird.png",
+		"extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rainbird/master/admin/rainbird.png",
 		"keywords": [
 			"rain bird",
 			"irrigation",
 			"water",
 			"garden"
 		],
-		"readme": "https://github.com/StrathCole/ioBroker.rainbird/blob/master/README.md",
+		"readme": "https://github.com/iobroker-community-adapters/ioBroker.rainbird/blob/master/README.md",
 		"loglevel": "info",
 		"type": "garden",
 		"license": "MIT",
