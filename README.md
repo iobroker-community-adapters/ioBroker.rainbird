@@ -47,6 +47,7 @@ This adapter would not have been possible without the great work of Marius Burka
     ### **WORK IN PROGRESS**
 -->
 ### 1.0.0-alpha.0 (2024-06-06)
+* (mcm1957) BREAKING: Thee password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 1.0.0 to release 1.0.0 or newer.
 * (mcm1957) Adapter requires node.js 18 and js-controller >= 5 now
 * (mcm1957) Adapter has been move to iobroker-community-adapters organization
 * (mcm1957) Dependencies have been updated
