@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
+      "1.0.1": {
+        "en": "Adapter requires node.js 18 and js-controller >= 5 now\nAdapter has been move to iobroker-community-adapters organization\nAdapter-core has been adapter, adapter supports js-controller 6 now.\nDependencies have been updated",
+        "de": "Adapter benötigt node.js 18 und js-controller >= 5 jetzt\nAdapter wurde auf iobroker-community-Adapter Organisation verschoben\nAdapter-Kern ist Adapter, Adapter unterstützt jetzt js-controller 6.\nAbhängigkeiten wurden aktualisiert",
+        "ru": "Адаптер требует node.js 18 и js-controller >= 5 сейчас\nАдаптер перешел в организацию iobroker-community-adapters\nAdapter-core был адаптером, адаптер поддерживает js-controller 6.\nЗависимость обновлена",
+        "pt": "Adapter requer node.js 18 e js-controller >= 5 agora\nAdapter foi transferido para iobroker-community-adapters organização\nAdapter-core foi adaptador, adaptador suporta js-controller 6 agora.\nAs dependências foram atualizadas",
+        "nl": "Adapter vereist node.js 18 en js-controller Nu 5\nAdapter is verplaatst naar iobroker-community-adapters organisatie\nAdapter-core is adapter geweest, adapter ondersteunt nu js-controller 6.\nAfhankelijkheden zijn bijgewerkt",
+        "fr": "Adaptateur nécessite node.js 18 et js-controller >= 5 maintenant\nAdaptateur a été transféré à iobroker-community-adaptateurs organisation\nAdaptateur-core a été adaptateur, adaptateur prend en charge js-controller 6 maintenant.\nLes dépendances ont été actualisées",
+        "it": "Adattatore richiede node.js 18 e js-controller >= 5 ora\nL'adattatore è stato spostato all'organizzazione iobroker-community-adapters\nAdattatore-core è stato adattatore, adattatore supporta js-controller 6 ora.\nLe dipendenze sono state aggiornate",
+        "es": "Adaptador requiere node.js 18 y js-controller √= 5 ahora\nAdaptador ha sido trasladado a la organización de ibroker-community-adapters\nAdaptador-core ha sido adaptador, adaptador soporta js-controller 6 ahora.\nSe han actualizado las dependencias",
+        "pl": "Adapter wymaga node.js 18 i sterownika js- > = 5 teraz\nAdapter został przeniesiony do organizacji adapterów iobroker- community\nAdapter- core został adapter, adapter obsługuje js- kontroler 6 teraz.\nZaktualizowano zależności",
+        "uk": "Адаптер вимагає node.js 18 і js-controller >= 5 тепер\nПерехід на iobroker-community-adapters\nАдаптер-core був адаптером, адаптер підтримує js-controller 6 тепер.\nЗалежність було оновлено",
+        "zh-cn": "适配器需要节点.js 18和js控制器 QQ 现在5号\n适应者被转移到了职业经纪人-社区适应者组织\n适配器核心一直是适配器,适配器现在支持js控制器6.\n依赖关系已更新"
+      },
       "1.0.0": {
         "en": "BREAKING: Thee password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 1.0.0 to release 1.0.0 or newer.\nAdapter requires node.js 18 and js-controller >= 5 now\nAdapter has been move to iobroker-community-adapters organization\nAdapter-core has been adapter, adapter supports js-controller 6 now.\nDependencies have been updated",
         "de": "BREAKING: Ihr Passwort wird jetzt verschlüsselt gespeichert. Bitte geben Sie Ihr Passwort auf der Konfigurationsseite ein. Dies ist nur einmal nach der Migration von Release < 1.0.0 bis Release 1.0.0 oder neuer erforderlich.\nAdapter benötigt node.js 18 und js-controller >= 5 jetzt\nAdapter wurde auf iobroker-community-Adapter Organisation verschoben\nAdapter-Kern ist Adapter, Adapter unterstützt jetzt js-controller 6.\nAbhängigkeiten wurden aktualisiert",
@@ -134,10 +147,8 @@
       }
     ]
   },
-  "protectedNative": [
-  ],
-  "encryptedNative": [
-  ],
+  "protectedNative": [],
+  "encryptedNative": [],
   "native": {
     "ipaddress": "",
     "password": "",
