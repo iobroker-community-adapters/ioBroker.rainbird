@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "1.0.0-alpha.0",
+    "version": "1.0.0-alpha.1",
     "news": {
+      "1.0.0-alpha.1": {
+        "en": "BREAKING: Thee password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 1.0.0 to release 1.0.0 or newer.\nAdapter requires node.js 18 and js-controller >= 5 now\nAdapter has been move to iobroker-community-adapters organization\nAdapter-core has been adapter, adapter supports js-controller 6 now.\nDependencies have been updated",
+        "de": "BREAKING: Ihr Passwort wird jetzt verschlüsselt gespeichert. Bitte geben Sie Ihr Passwort auf der Konfigurationsseite ein. Dies ist nur einmal nach der Migration von Release < 1.0.0 bis Release 1.0.0 oder neuer erforderlich.\nAdapter benötigt node.js 18 und js-controller >= 5 jetzt\nAdapter wurde auf iobroker-community-Adapter Organisation verschoben\nAdapter-Kern ist Adapter, Adapter unterstützt jetzt js-controller 6.\nAbhängigkeiten wurden aktualisiert",
+        "ru": "Зашифрованный пароль. Пожалуйста, введите пароль на странице настройки. Это требуется только один раз после перехода от релиза < 1.0.0 к выпуску 1.0.0 или более новым.\nАдаптер требует node.js 18 и js-controller >= 5 сейчас\nАдаптер перешел в организацию iobroker-community-adapters\nAdapter-core был адаптером, адаптер поддерживает js-controller 6.\nЗависимость обновлена",
+        "pt": "BREAKING: A senha é armazenada criptografada agora. Por favor, volte a inserir a senha na página de configuração. Isso é necessário apenas uma vez após a migração do lançamento < 1.0.0 para liberar 1.0.0 ou mais recente.\nAdapter requer node.js 18 e js-controller >= 5 agora\nAdapter foi transferido para iobroker-community-adapters organização\nAdapter-core foi adaptador, adaptador suporta js-controller 6 agora.\nAs dependências foram atualizadas",
+        "nl": "Je wachtwoord wordt nu versleuteld opgeslagen. Voer uw wachtwoord opnieuw in op de configuratiepagina. Dit is slechts eenmaal nodig na migratie van afgifte < 1.0.0 om 1.0.0 of nieuwer vrij te geven.\nAdapter vereist node.js 18 en js-controller Nu 5\nAdapter is verplaatst naar iobroker-community-adapters organisatie\nAdapter-core is adapter geweest, adapter ondersteunt nu js-controller 6.\nAfhankelijkheden zijn bijgewerkt",
+        "fr": "Le mot de passe est maintenant crypté. Veuillez entrer de nouveau votre mot de passe à la page de configuration. Ceci n'est nécessaire qu'une fois après la migration de la libération < 1.0.0 à la libération 1.0.0 ou plus récente.\nAdaptateur nécessite node.js 18 et js-controller >= 5 maintenant\nAdaptateur a été transféré à iobroker-community-adaptateurs organisation\nAdaptateur-core a été adaptateur, adaptateur prend en charge js-controller 6 maintenant.\nLes dépendances ont été actualisées",
+        "it": "BREAKING: La password viene archiviata ora. Si prega di reinserire la password nella pagina di configurazione. Ciò è richiesto solo una volta dopo la migrazione dal rilascio < 1.0.0 al rilascio 1.0.0 o più recente.\nAdattatore richiede node.js 18 e js-controller >= 5 ora\nL'adattatore è stato spostato all'organizzazione iobroker-community-adapters\nAdattatore-core è stato adattatore, adattatore supporta js-controller 6 ora.\nLe dipendenze sono state aggiornate",
+        "es": "BREAKING: Tu contraseña se almacena encriptada ahora. Por favor vuelva a introducir su contraseña en la página de configuración. Esto se requiere sólo una vez después de la migración de la liberación < 1.0.0 para liberar 1.0.0 o más.\nAdaptador requiere node.js 18 y js-controller √= 5 ahora\nAdaptador ha sido trasladado a la organización de ibroker-community-adapters\nAdaptador-core ha sido adaptador, adaptador soporta js-controller 6 ahora.\nSe han actualizado las dependencias",
+        "pl": "Hasło jest teraz zaszyfrowane. Proszę wpisać hasło na stronie konfiguracji. Jest to wymagane tylko raz po migracji z wydania < 1.0.0 do wydania 1.0.0 lub nowszego.\nAdapter wymaga node.js 18 i sterownika js- > = 5 teraz\nAdapter został przeniesiony do organizacji adapterów iobroker- community\nAdapter- core został adapter, adapter obsługuje js- kontroler 6 teraz.\nZaktualizowano zależności",
+        "uk": "BREAKING: пароля зберігається зашифровано зараз. Будь ласка, перейменуйте пароль на сторінці конфігурації. Це потрібно тільки після міграції від релізу < 1.0.0 для релізу 1.0.0 або новачка.\nАдаптер вимагає node.js 18 і js-controller >= 5 тепер\nПерехід на iobroker-community-adapters\nАдаптер-core був адаптером, адаптер підтримує js-controller 6 тепер.\nЗалежність було оновлено",
+        "zh-cn": "你密码现在被加密了 请在配置页面重新输入密码 。 仅在从释放 < 1.0.0到释放1.0.0或更新后需要一次.\n适配器需要节点.js 18和js控制器 QQ 现在5号\n适应者被转移到了职业经纪人-社区适应者组织\n适配器核心一直是适配器,适配器现在支持js控制器6.\n依赖关系已更新"
+      },
       "1.0.0-alpha.0": {
         "en": "Adapter has been move to iobroker-community-adapters organization\nDependencies have been updated",
         "de": "Adapter wurde auf iobroker-community-Adapter Organisation verschoben\nAbhängigkeiten wurden aktualisiert",
@@ -80,19 +93,6 @@
         "pl": "Naprawiono blokowanie adaptera po przekroczeniu limitu czasu połączenia",
         "zh-cn": "修复了连接超时时适配器停顿的问题",
         "uk": "Виправлено зупинку адаптера під час очікування підключення"
-      },
-      "0.1.1": {
-        "en": "Smaller fixes",
-        "de": "Kleinere Korrekturen",
-        "ru": "Небольшие исправления",
-        "pt": "Correções menores",
-        "nl": "Kleinere oplossingen",
-        "fr": "Corrections plus petites",
-        "it": "Piccole correzioni",
-        "es": "Pequeñas correcciones",
-        "pl": "Mniejsze poprawki",
-        "zh-cn": "较小的修复",
-        "uk": "Менші виправлення"
       }
     },
     "titleLang": {
@@ -137,84 +137,84 @@
     ],
     "readme": "https://github.com/iobroker-community-adapters/ioBroker.rainbird/blob/master/README.md",
     "loglevel": "info",
-	"tier": 2,
+    "tier": 2,
     "type": "garden",
     "licenseInformation": {
-		"license": "MIT",
-		"type": "free"
-	},
-	"messagebox": true,
+      "license": "MIT",
+      "type": "free"
+    },
+    "messagebox": true,
     "materialize": true,
     "enabled": false,
     "compact": true,
     "connectionType": "local",
     "dataSource": "poll",
     "dependencies": [
-		{
-		  "js-controller": ">=5.0.19"
-		}
-	],
-	"globalDependencies": [
-		{
-		  "admin": ">=6.13.16"
-		}
-	],
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.13.16"
+      }
+    ],
     "messages": [
-		{
-			"condition": {
-				"operand": "and",
-				"rules": [
-				"oldVersion<1.0.0",
-				"newVersion>=1.0.0"
-				]
-			},
-			"title": {
-				"en": "Important notice!",
-				"de": "Wichtiger Hinweis!",
-				"ru": "Важное замечание!",
-				"pt": "Notícia importante!",
-				"nl": "Belangrijke mededeling!",
-				"fr": "Avis important!",
-				"it": "Avviso IMPORTANTE!",
-				"es": "Noticia importante!",
-				"pl": "Ważna uwaga!",
-				"zh-cn": "重要通知!",
-				"uk": "Важливе повідомлення!"
-			},
-			"text": {
-				"en": "The password is stored encrypted starting with release 1.0.0. Please open configuration page and reenter your password again. This action is required only once.",
-				"de": "Das Passwort wird ab Release 1.0.0 verschlüsselt gespeichert. Bitte öffnen Sie die Konfigurationsseite und geben Sie Ihr Passwort erneut ein. Diese Aktion ist nur einmal erforderlich.",
-				"ru": "Пароль хранится зашифрованным, начиная с релиза 1.0.0. Пожалуйста, откройте страницу настройки и снова введите свой пароль. Это действие требуется только один раз.",
-				"pt": "A senha é armazenada criptografada começando com a versão 1.0.0. Por favor, abra a página de configuração e reinsira sua senha novamente. Esta ação é necessária apenas uma vez.",
-				"nl": "Het wachtwoord wordt versleuteld opgeslagen, te beginnen met release 1.0.0. Open de configuratiepagina en voer uw wachtwoord opnieuw in. Deze actie is slechts één keer nodig.",
-				"fr": "Le mot de passe est stocké crypté à partir de la version 1.0.0. Veuillez ouvrir la page de configuration et réentrer votre mot de passe. Cette mesure n'est requise qu'une seule fois.",
-				"it": "La password viene memorizzata a partire dal rilascio 1.0.0. Si prega di aprire la pagina di configurazione e reinserire nuovamente la password. Questa azione è richiesta solo una volta.",
-				"es": "La contraseña se almacena encriptada comenzando con el lanzamiento 1.0.0. Por favor, abra la página de configuración y vuelva a introducir su contraseña. Esta acción sólo se requiere una vez.",
-				"pl": "Hasło jest zapisywane zaszyfrowane począwszy od wydania 1.0.0. Proszę otworzyć stronę konfiguracji i ponownie wprowadzić hasło. Działanie to jest wymagane tylko raz.",
-				"uk": "Зашифрований пароль з релізом 1.0.0. Введіть номер мобільного, який Ви вказали при укладаннi договору з нами Ця дія потрібна тільки один раз.",
-				"zh-cn": "密码是从1.0.0发布开始的加密存储. 请打开配置页面并再次输入密码 。 只需采取这一行动一次."
-			},
-			"link": "https://github.com/iobroker-community-adapters/ioBroker.rainbird#changelog",
-			"level": "warn",
-			"linkText": {
-				"en": "Changelog",
-				"de": "Änderungsprotokoll",
-				"ru": "Список изменений",
-				"pt": "Registro de alterações",
-				"nl": "Wijzigingslog",
-				"fr": "Journal des modifications",
-				"it": "Registro delle modifiche",
-				"es": "registro de cambios",
-				"pl": "Dziennik zmian",
-				"zh-cn": "变更日志",
-				"uk": "Журнал змін"
-			},
-			"buttons": [
-				"agree",
-				"cancel"
-			]
-		}
-	  ]
+      {
+        "condition": {
+          "operand": "and",
+          "rules": [
+            "oldVersion<1.0.0",
+            "newVersion>=1.0.0"
+          ]
+        },
+        "title": {
+          "en": "Important notice!",
+          "de": "Wichtiger Hinweis!",
+          "ru": "Важное замечание!",
+          "pt": "Notícia importante!",
+          "nl": "Belangrijke mededeling!",
+          "fr": "Avis important!",
+          "it": "Avviso IMPORTANTE!",
+          "es": "Noticia importante!",
+          "pl": "Ważna uwaga!",
+          "zh-cn": "重要通知!",
+          "uk": "Важливе повідомлення!"
+        },
+        "text": {
+          "en": "The password is stored encrypted starting with release 1.0.0. Please open configuration page and reenter your password again. This action is required only once.",
+          "de": "Das Passwort wird ab Release 1.0.0 verschlüsselt gespeichert. Bitte öffnen Sie die Konfigurationsseite und geben Sie Ihr Passwort erneut ein. Diese Aktion ist nur einmal erforderlich.",
+          "ru": "Пароль хранится зашифрованным, начиная с релиза 1.0.0. Пожалуйста, откройте страницу настройки и снова введите свой пароль. Это действие требуется только один раз.",
+          "pt": "A senha é armazenada criptografada começando com a versão 1.0.0. Por favor, abra a página de configuração e reinsira sua senha novamente. Esta ação é necessária apenas uma vez.",
+          "nl": "Het wachtwoord wordt versleuteld opgeslagen, te beginnen met release 1.0.0. Open de configuratiepagina en voer uw wachtwoord opnieuw in. Deze actie is slechts één keer nodig.",
+          "fr": "Le mot de passe est stocké crypté à partir de la version 1.0.0. Veuillez ouvrir la page de configuration et réentrer votre mot de passe. Cette mesure n'est requise qu'une seule fois.",
+          "it": "La password viene memorizzata a partire dal rilascio 1.0.0. Si prega di aprire la pagina di configurazione e reinserire nuovamente la password. Questa azione è richiesta solo una volta.",
+          "es": "La contraseña se almacena encriptada comenzando con el lanzamiento 1.0.0. Por favor, abra la página de configuración y vuelva a introducir su contraseña. Esta acción sólo se requiere una vez.",
+          "pl": "Hasło jest zapisywane zaszyfrowane począwszy od wydania 1.0.0. Proszę otworzyć stronę konfiguracji i ponownie wprowadzić hasło. Działanie to jest wymagane tylko raz.",
+          "uk": "Зашифрований пароль з релізом 1.0.0. Введіть номер мобільного, який Ви вказали при укладаннi договору з нами Ця дія потрібна тільки один раз.",
+          "zh-cn": "密码是从1.0.0发布开始的加密存储. 请打开配置页面并再次输入密码 。 只需采取这一行动一次."
+        },
+        "link": "https://github.com/iobroker-community-adapters/ioBroker.rainbird#changelog",
+        "level": "warn",
+        "linkText": {
+          "en": "Changelog",
+          "de": "Änderungsprotokoll",
+          "ru": "Список изменений",
+          "pt": "Registro de alterações",
+          "nl": "Wijzigingslog",
+          "fr": "Journal des modifications",
+          "it": "Registro delle modifiche",
+          "es": "registro de cambios",
+          "pl": "Dziennik zmian",
+          "zh-cn": "变更日志",
+          "uk": "Журнал змін"
+        },
+        "buttons": [
+          "agree",
+          "cancel"
+        ]
+      }
+    ]
   },
   "protectedNative": [
     "password"
