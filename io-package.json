@@ -1,162 +1,162 @@
 {
-	"common": {
-		"name": "rainbird",
-		"version": "0.2.3",
-		"news": {
-			"0.2.3": {
-				"en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information\nOnly show datapoints for available stations"
-			},
-			"0.2.2": {
-				"en": "Added fixes for adapter crashes on failed connection to controller",
-				"de": "Korrekturen für Adapterabstürze bei fehlgeschlagener Verbindung zum Controller hinzugefügt",
-				"ru": "Добавлены исправления для сбоев адаптера при сбое подключения к контроллеру",
-				"pt": "Correções adicionadas para falhas do adaptador em falha na conexão com o controlador",
-				"nl": "Er zijn oplossingen toegevoegd voor adaptercrashes bij een mislukte verbinding met de controller",
-				"fr": "Ajout de correctifs pour les plantages de l'adaptateur en cas d'échec de connexion au contrôleur",
-				"it": "Aggiunte correzioni per crash dell'adattatore in caso di connessione fallita al controller",
-				"es": "Se agregaron correcciones para fallas del adaptador al fallar la conexión al controlador",
-				"pl": "Dodano poprawki awarii adaptera w przypadku nieudanego połączenia ze sterownikiem",
-				"zh-cn": "添加了针对适配器与控制器连接失败时崩溃的修复程序"
-			},
-			"0.2.1": {
-				"en": "Added support for run times on different controller model\nLess polling for some states to reduce requests to controller",
-				"de": "Unterstützung für Laufzeiten auf anderem Controller-Modell hinzugefügt\nWeniger Abfragen für einige Datenpunkte, um Anforderungen an den Controller zu reduzieren\n",
-				"ru": "Добавлена поддержка времени выполнения на другой модели контроллера\nМеньше опроса для некоторых штатов, чтобы уменьшить количество запросов к контроллеру\n",
-				"pt": "Adicionado suporte para tempos de execução em diferentes modelos de controladores\nMenos pesquisas para alguns estados para reduzir solicitações ao controlador\n",
-				"nl": "Ondersteuning toegevoegd voor looptijden op verschillende controllermodellen\nMinder polling voor sommige staten om verzoeken aan de controller te verminderen\n",
-				"fr": "Ajout de la prise en charge des temps d'exécution sur différents modèles de contrôleurs\nMoins d'interrogation pour certains États afin de réduire les demandes au contrôleur\n",
-				"it": "Aggiunto supporto per i tempi di esecuzione su diversi modelli di controller\nMeno polling per alcuni stati per ridurre le richieste al controller\n",
-				"es": "Se agregó soporte para tiempos de ejecución en diferentes modelos de controlador\nMenos encuestas para algunos estados para reducir las solicitudes al controlador\n",
-				"pl": "Dodano obsługę czasów uruchamiania dla różnych modeli kontrolerów\nMniejsze sondowanie w niektórych stanach w celu ograniczenia żądań do kontrolera\n",
-				"zh-cn": "增加了对不同控制器型号上运行时间的支持\n减少某些状态的轮询，以减少对控制器的请求\n"
-			},
-			"0.2.0": {
-				"en": "Added remaining irrigation time of zone\nFixed bug in decoding responses",
-				"de": "Verbleibende Bewässerungszeit der Zone hinzugefügt\nFehler beim Dekodieren von Antworten behoben",
-				"ru": "Добавлено оставшееся время полива зоны\nИсправлена ошибка в расшифровке ответов",
-				"pt": "Adicionado tempo de irrigação restante da zona\nCorrigido o erro nas respostas de decodificação",
-				"nl": "Resterende irrigatietijd van zone toegevoegd\nBug opgelost bij het decoderen van reacties",
-				"fr": "Ajout du temps d'irrigation restant de la zone\nCorrection d'un bug dans le décodage des réponses",
-				"it": "Aggiunto il tempo di irrigazione residuo della zona\nBug risolto nelle risposte di decodifica",
-				"es": "Se agregó el tiempo de riego restante de la zona\nSe corrigió el error en las respuestas de decodificación",
-				"pl": "Dodano pozostały czas nawadniania strefy\nNaprawiono błąd w odpowiedziach na dekodowanie",
-				"zh-cn": "增加了区域的剩余灌溉时间\n修复了解码响应中的错误"
-			},
-			"0.1.2": {
-				"en": "Fixed adapter stalling on connection timeout",
-				"de": "Problem behoben, durch das der Adapter bei einem Verbindungs-Timeout blockierte",
-				"ru": "Исправлено зависание адаптера при тайм-ауте соединения",
-				"pt": "Corrigido o bloqueio do adaptador no tempo limite da conexão",
-				"nl": "Vaste adapter loopt vast bij time-out van de verbinding",
-				"fr": "Adaptateur fixe bloquant lors de l'expiration de la connexion",
-				"it": "Corretto lo stallo dell'adattatore al timeout della connessione",
-				"es": "Se corrigió el bloqueo del adaptador en el tiempo de espera de conexión",
-				"pl": "Naprawiono blokowanie adaptera po przekroczeniu limitu czasu połączenia",
-				"zh-cn": "修复了连接超时时适配器停顿的问题"
-			},
-			"0.1.1": {
-				"en": "Smaller fixes",
-				"de": "Kleinere Korrekturen",
-				"ru": "Небольшие исправления",
-				"pt": "Correções menores",
-				"nl": "Kleinere oplossingen",
-				"fr": "Corrections plus petites",
-				"it": "Piccole correzioni",
-				"es": "Pequeñas correcciones",
-				"pl": "Mniejsze poprawki",
-				"zh-cn": "较小的修复"
-			},
-			"0.1.0": {
-				"en": "Initial version",
-				"de": "Initiale Version",
-				"ru": "Первоначальный вариант",
-				"pt": "Versão inicial",
-				"nl": "Eerste versie",
-				"fr": "Version initiale",
-				"it": "Versione iniziale",
-				"es": "Versión inicial",
-				"pl": "Początkowa wersja",
-				"zh-cn": "初始版本"
-			}
-		},
-		"titleLang": {
-			"en": "Rain Bird irrigation control",
-			"de": "Bewässerungssteuerung für Rain Bird",
-			"ru": "Контроль орошения Rain Bird",
-			"pt": "Controle de irrigação Rain Bird",
-			"nl": "Rain Bird irrigatiecontrole",
-			"fr": "Contrôle de l'irrigation Rain Bird",
-			"it": "Controllo dell'irrigazione Rain Bird",
-			"es": "Control de riego Rain Bird",
-			"pl": "Kontrola nawadniania Rain Bird",
-			"zh-cn": "雨鸟灌溉控制"
-		},
-		"desc": {
-			"en": "Adapter to communicate with a Rain Bird irrigation controller and LNK WiFi module attached",
-			"de": "Adapter für die Kommunikation mit einem Rain Bird-Bewässerungscontroller und einem angeschlossenen LNK-WiFi-Modul",
-			"ru": "Адаптер для связи с контроллером полива Rain Bird и подключенным модулем LNK WiFi",
-			"pt": "Adaptador para se comunicar com um controlador de irrigação Rain Bird e o módulo WiFi LNK conectado",
-			"nl": "Adapter om te communiceren met een Rain Bird-irrigatiecontroller en bevestigde LNK WiFi-module",
-			"fr": "Adaptateur pour communiquer avec un contrôleur d'irrigation Rain Bird et un module WiFi LNK attaché",
-			"it": "Adattatore per comunicare con un programmatore di irrigazione Rain Bird e un modulo WiFi LNK collegato",
-			"es": "Adaptador para comunicarse con un controlador de riego Rain Bird y un módulo WiFi LNK conectado",
-			"pl": "Dołączony adapter do komunikacji z kontrolerem nawadniania Rain Bird i modułem WiFi LNK",
-			"zh-cn": "与雨鸟灌溉控制器和连接的LNK WiFi模块通信的适配器"
-		},
-		"authors": [
-			"Marius Burkard <m.burkard@pixcept.de>",
-			"mcm1957 <iobroker-community-adapters@gmx.de>"
-		],
-		"platform": "Javascript/Node.js",
-		"mode": "daemon",
-		"icon": "rainbird.png",
-		"extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rainbird/master/admin/rainbird.png",
-		"keywords": [
-			"rain bird",
-			"irrigation",
-			"water",
-			"garden"
-		],
-		"readme": "https://github.com/iobroker-community-adapters/ioBroker.rainbird/blob/master/README.md",
-		"loglevel": "info",
-		"type": "garden",
-		"license": "MIT",
-		"messagebox": true,
-		"materialize": true,
-		"enabled": false,
-		"compact": true,
-		"connectionType": "local",
-        "dataSource": "poll",
-		"dependencies": [
-		]
-	},
-	"native": {
-		"ipaddress": "",
-		"password": "",
-		"pollinterval": 20000
-	},
-	"objects": [],
-	"instanceObjects": [
-		{
-			"_id": "info",
-			"type": "channel",
-			"common": {
-				"name": "Adapter-Information"
-			},
-			"native": {}
-		},
-		{
-			"_id": "info.connection",
-			"type": "state",
-			"common": {
-				"role": "indicator.connected",
-				"name": "Whether the adapter is connected to the gateway",
-				"type": "boolean",
-				"read": true,
-				"write": false,
-				"def": false
-			},
-			"native": {}
-		}
-	]
+  "common": {
+    "name": "rainbird",
+    "version": "1.0.0-alpha.0",
+    "news": {
+      "1.0.0-alpha.0": {
+        "en": "Adapter has been move to iobroker-community-adapters organization\nDependencies have been updated",
+        "de": "Adapter wurde auf iobroker-community-Adapter Organisation verschoben\nAbhängigkeiten wurden aktualisiert",
+        "ru": "Адаптер перешел в организацию iobroker-community-adapters\nЗависимость обновлена",
+        "pt": "Adapter foi transferido para iobroker-community-adapters organização\nAs dependências foram atualizadas",
+        "nl": "Adapter is verplaatst naar iobroker-community-adapters organisatie\nAfhankelijkheden zijn bijgewerkt",
+        "fr": "Adaptateur a été transféré à iobroker-community-adaptateurs organisation\nLes dépendances ont été actualisées",
+        "it": "L'adattatore è stato spostato all'organizzazione iobroker-community-adapters\nLe dipendenze sono state aggiornate",
+        "es": "Adaptador ha sido trasladado a la organización de ibroker-community-adapters\nSe han actualizado las dependencias",
+        "pl": "Adapter został przeniesiony do organizacji adapterów iobroker- community\nZaktualizowano zależności",
+        "uk": "Перехід на iobroker-community-adapters\nЗалежність було оновлено",
+        "zh-cn": "适应者被转移到了职业经纪人-社区适应者组织\n依赖关系已更新"
+      },
+      "0.2.3": {
+        "en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information\nOnly show datapoints for available stations"
+      },
+      "0.2.2": {
+        "en": "Added fixes for adapter crashes on failed connection to controller",
+        "de": "Korrekturen für Adapterabstürze bei fehlgeschlagener Verbindung zum Controller hinzugefügt",
+        "ru": "Добавлены исправления для сбоев адаптера при сбое подключения к контроллеру",
+        "pt": "Correções adicionadas para falhas do adaptador em falha na conexão com o controlador",
+        "nl": "Er zijn oplossingen toegevoegd voor adaptercrashes bij een mislukte verbinding met de controller",
+        "fr": "Ajout de correctifs pour les plantages de l'adaptateur en cas d'échec de connexion au contrôleur",
+        "it": "Aggiunte correzioni per crash dell'adattatore in caso di connessione fallita al controller",
+        "es": "Se agregaron correcciones para fallas del adaptador al fallar la conexión al controlador",
+        "pl": "Dodano poprawki awarii adaptera w przypadku nieudanego połączenia ze sterownikiem",
+        "zh-cn": "添加了针对适配器与控制器连接失败时崩溃的修复程序"
+      },
+      "0.2.1": {
+        "en": "Added support for run times on different controller model\nLess polling for some states to reduce requests to controller",
+        "de": "Unterstützung für Laufzeiten auf anderem Controller-Modell hinzugefügt\nWeniger Abfragen für einige Datenpunkte, um Anforderungen an den Controller zu reduzieren\n",
+        "ru": "Добавлена поддержка времени выполнения на другой модели контроллера\nМеньше опроса для некоторых штатов, чтобы уменьшить количество запросов к контроллеру\n",
+        "pt": "Adicionado suporte para tempos de execução em diferentes modelos de controladores\nMenos pesquisas para alguns estados para reduzir solicitações ao controlador\n",
+        "nl": "Ondersteuning toegevoegd voor looptijden op verschillende controllermodellen\nMinder polling voor sommige staten om verzoeken aan de controller te verminderen\n",
+        "fr": "Ajout de la prise en charge des temps d'exécution sur différents modèles de contrôleurs\nMoins d'interrogation pour certains États afin de réduire les demandes au contrôleur\n",
+        "it": "Aggiunto supporto per i tempi di esecuzione su diversi modelli di controller\nMeno polling per alcuni stati per ridurre le richieste al controller\n",
+        "es": "Se agregó soporte para tiempos de ejecución en diferentes modelos de controlador\nMenos encuestas para algunos estados para reducir las solicitudes al controlador\n",
+        "pl": "Dodano obsługę czasów uruchamiania dla różnych modeli kontrolerów\nMniejsze sondowanie w niektórych stanach w celu ograniczenia żądań do kontrolera\n",
+        "zh-cn": "增加了对不同控制器型号上运行时间的支持\n减少某些状态的轮询，以减少对控制器的请求\n"
+      },
+      "0.2.0": {
+        "en": "Added remaining irrigation time of zone\nFixed bug in decoding responses",
+        "de": "Verbleibende Bewässerungszeit der Zone hinzugefügt\nFehler beim Dekodieren von Antworten behoben",
+        "ru": "Добавлено оставшееся время полива зоны\nИсправлена ошибка в расшифровке ответов",
+        "pt": "Adicionado tempo de irrigação restante da zona\nCorrigido o erro nas respostas de decodificação",
+        "nl": "Resterende irrigatietijd van zone toegevoegd\nBug opgelost bij het decoderen van reacties",
+        "fr": "Ajout du temps d'irrigation restant de la zone\nCorrection d'un bug dans le décodage des réponses",
+        "it": "Aggiunto il tempo di irrigazione residuo della zona\nBug risolto nelle risposte di decodifica",
+        "es": "Se agregó el tiempo de riego restante de la zona\nSe corrigió el error en las respuestas de decodificación",
+        "pl": "Dodano pozostały czas nawadniania strefy\nNaprawiono błąd w odpowiedziach na dekodowanie",
+        "zh-cn": "增加了区域的剩余灌溉时间\n修复了解码响应中的错误"
+      },
+      "0.1.2": {
+        "en": "Fixed adapter stalling on connection timeout",
+        "de": "Problem behoben, durch das der Adapter bei einem Verbindungs-Timeout blockierte",
+        "ru": "Исправлено зависание адаптера при тайм-ауте соединения",
+        "pt": "Corrigido o bloqueio do adaptador no tempo limite da conexão",
+        "nl": "Vaste adapter loopt vast bij time-out van de verbinding",
+        "fr": "Adaptateur fixe bloquant lors de l'expiration de la connexion",
+        "it": "Corretto lo stallo dell'adattatore al timeout della connessione",
+        "es": "Se corrigió el bloqueo del adaptador en el tiempo de espera de conexión",
+        "pl": "Naprawiono blokowanie adaptera po przekroczeniu limitu czasu połączenia",
+        "zh-cn": "修复了连接超时时适配器停顿的问题"
+      },
+      "0.1.1": {
+        "en": "Smaller fixes",
+        "de": "Kleinere Korrekturen",
+        "ru": "Небольшие исправления",
+        "pt": "Correções menores",
+        "nl": "Kleinere oplossingen",
+        "fr": "Corrections plus petites",
+        "it": "Piccole correzioni",
+        "es": "Pequeñas correcciones",
+        "pl": "Mniejsze poprawki",
+        "zh-cn": "较小的修复"
+      }
+    },
+    "titleLang": {
+      "en": "Rain Bird irrigation control",
+      "de": "Bewässerungssteuerung für Rain Bird",
+      "ru": "Контроль орошения Rain Bird",
+      "pt": "Controle de irrigação Rain Bird",
+      "nl": "Rain Bird irrigatiecontrole",
+      "fr": "Contrôle de l'irrigation Rain Bird",
+      "it": "Controllo dell'irrigazione Rain Bird",
+      "es": "Control de riego Rain Bird",
+      "pl": "Kontrola nawadniania Rain Bird",
+      "zh-cn": "雨鸟灌溉控制"
+    },
+    "desc": {
+      "en": "Adapter to communicate with a Rain Bird irrigation controller and LNK WiFi module attached",
+      "de": "Adapter für die Kommunikation mit einem Rain Bird-Bewässerungscontroller und einem angeschlossenen LNK-WiFi-Modul",
+      "ru": "Адаптер для связи с контроллером полива Rain Bird и подключенным модулем LNK WiFi",
+      "pt": "Adaptador para se comunicar com um controlador de irrigação Rain Bird e o módulo WiFi LNK conectado",
+      "nl": "Adapter om te communiceren met een Rain Bird-irrigatiecontroller en bevestigde LNK WiFi-module",
+      "fr": "Adaptateur pour communiquer avec un contrôleur d'irrigation Rain Bird et un module WiFi LNK attaché",
+      "it": "Adattatore per comunicare con un programmatore di irrigazione Rain Bird e un modulo WiFi LNK collegato",
+      "es": "Adaptador para comunicarse con un controlador de riego Rain Bird y un módulo WiFi LNK conectado",
+      "pl": "Dołączony adapter do komunikacji z kontrolerem nawadniania Rain Bird i modułem WiFi LNK",
+      "zh-cn": "与雨鸟灌溉控制器和连接的LNK WiFi模块通信的适配器"
+    },
+    "authors": [
+      "Marius Burkard <m.burkard@pixcept.de>",
+      "mcm1957 <iobroker-community-adapters@gmx.de>"
+    ],
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "rainbird.png",
+    "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rainbird/master/admin/rainbird.png",
+    "keywords": [
+      "rain bird",
+      "irrigation",
+      "water",
+      "garden"
+    ],
+    "readme": "https://github.com/iobroker-community-adapters/ioBroker.rainbird/blob/master/README.md",
+    "loglevel": "info",
+    "type": "garden",
+    "license": "MIT",
+    "messagebox": true,
+    "materialize": true,
+    "enabled": false,
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "dependencies": []
+  },
+  "native": {
+    "ipaddress": "",
+    "password": "",
+    "pollinterval": 20000
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Adapter-Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Whether the adapter is connected to the gateway",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }

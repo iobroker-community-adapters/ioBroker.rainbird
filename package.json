@@ -1,14 +1,14 @@
 {
   "name": "iobroker.rainbird",
-  "version": "0.2.3",
+  "version": "1.0.0-alpha.0",
   "description": "rain bird",
   "author": {
     "name": "Marius Burkard",
     "email": "m.burkard@pixcept.de"
   },
   "contributors": [
-      "Marius Burkard <m.burkard@pixcept.de>",
-      "mcm1957 <iobroker-community-adapters@gmx.de"
+    "Marius Burkard <m.burkard@pixcept.de>",
+    "mcm1957 <iobroker-community-adapters@gmx.de"
   ],
   "homepage": "https://github.com/iobroker-community-adapters/ioBroker.rainbird",
   "license": "MIT",
@@ -25,8 +25,8 @@
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.1.6",
-  	"@strathcole/iob-lib": "^0.1.2",
-  	"request": "^2.88.0"
+    "@strathcole/iob-lib": "^0.1.2",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^3.7.0",

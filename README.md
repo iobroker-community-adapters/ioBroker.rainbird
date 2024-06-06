@@ -46,7 +46,7 @@ This adapter would not have been possible without the great work of Marius Burka
 	Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.0-alpha.0 (2024-06-06)
 * (mcm1957) Adapter has been move to iobroker-community-adapters organization
 * (mcm1957) Dependencies have been updated
 
@@ -67,18 +67,6 @@ This adapter would not have been possible without the great work of Marius Burka
 
 -   Added remaining irrigation time of zone
 -   Fixed bug in decoding responses
-
-### 0.1.2
-
--   Fixed adapter stalling on connection timeout
-
-### 0.1.1
-
--   Smaller fixes
-
-### 0.1.0
-
--   First running Version
 
 ## License
 
