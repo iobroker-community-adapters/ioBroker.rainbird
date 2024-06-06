@@ -37,10 +37,20 @@ Based on the python library "pyrainbird" from https://github.com/jbarrancos/pyra
 `rainbird.X.device.stations.Y.testZone` - Test zone Y.  
 
 
+## Credits
+
+This adapter would not have been possible without the great work of Marius Burkard <m.burkard@pixcept.de>, who previous releases of this adapter.
+
 ## Changelog
+<!--
+	Placeholder for the next version (at the beginning of the line):
+    ### **WORK IN PROGRESS**
+-->
+### **WORK IN PROGRESS**
+* (mcm1957) Adapter has been move to iobroker-community-adapters organization
+* (mcm1957) Dependencies have been updated
 
 ### 0.2.3
-
 -   Fixed problem with sensor data
 -   Added seasonal water budget adjust information
 
