@@ -23,6 +23,9 @@
     "type": "git",
     "url": "git+https://github.com/iobroker-community-adapters/ioBroker.rainbird.git"
   },
+  "engines": {
+    "node": ">= 18"
+  },
   "dependencies": {
     "@iobroker/adapter-core": "^3.1.6",
     "@strathcole/iob-lib": "^0.1.2",
