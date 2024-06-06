@@ -1,0 +1,6 @@
+{
+    "ipaddress": "dirección IP",
+    "on save adapter restarts with new config immediately": "al guardar el adaptador se reinicia con la nueva configuración inmediatamente",
+    "password": "contraseña",
+    "pollinterval": "intervalo de votación"
+}

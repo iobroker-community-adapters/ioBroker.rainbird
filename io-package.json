@@ -17,7 +17,17 @@
         "zh-cn": "适应者被转移到了职业经纪人-社区适应者组织\n依赖关系已更新"
       },
       "0.2.3": {
-        "en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information\nOnly show datapoints for available stations"
+        "en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information\nOnly show datapoints for available stations",
+        "de": "Problem mit Sensordaten behoben\nInformationen zur saisonalen Wasserbudgetanpassung hinzugefügt\nZeigt nur Datenpunkte für verfügbare Stationen an",
+        "ru": "Исправлена ​​проблема с данными датчиков\nДобавлена ​​информация о корректировке сезонного водного баланса.\nПоказывать только точки данных для доступных станций",
+        "pt": "Corrigido problema com dados do sensor\nAdicionadas informações de ajuste do orçamento sazonal de água\nMostrar apenas pontos de dados para estações disponíveis",
+        "nl": "Probleem met sensorgegevens opgelost\nInformatie over het aanpassen van het seizoensgebonden waterbudget toegevoegd\nToon alleen datapunten voor beschikbare stations",
+        "fr": "Problème résolu avec les données du capteur\nAjout d’informations sur l’ajustement du budget hydrique saisonnier\nAfficher uniquement les points de données pour les stations disponibles",
+        "it": "Risolto problema con i dati del sensore\nAggiunte informazioni sulla regolazione del budget idrico stagionale\nMostra solo i punti dati per le stazioni disponibili",
+        "es": "Problema solucionado con los datos del sensor.\nSe agregó información de ajuste del presupuesto de agua estacional.\nMostrar solo puntos de datos para estaciones disponibles",
+        "pl": "Naprawiono problem z danymi czujnika\nDodano informacje o sezonowych korektach budżetu wodnego\nPokazuj tylko punkty danych dla dostępnych stacji",
+        "uk": "Виправлена ​​проблема з даними датчика\nДодано інформацію про коригування сезонного бюджету води\nПоказувати дані тільки для доступних станцій",
+        "zh-cn": "修复了传感器数据的问题\n添加季节性用水预算调整信息\n仅显示可用站点的数据点"
       },
       "0.2.2": {
         "en": "Added fixes for adapter crashes on failed connection to controller",
@@ -29,7 +39,8 @@
         "it": "Aggiunte correzioni per crash dell'adattatore in caso di connessione fallita al controller",
         "es": "Se agregaron correcciones para fallas del adaptador al fallar la conexión al controlador",
         "pl": "Dodano poprawki awarii adaptera w przypadku nieudanego połączenia ze sterownikiem",
-        "zh-cn": "添加了针对适配器与控制器连接失败时崩溃的修复程序"
+        "zh-cn": "添加了针对适配器与控制器连接失败时崩溃的修复程序",
+        "uk": "Додано виправлення збоїв адаптера при невдалому підключенні до контролера"
       },
       "0.2.1": {
         "en": "Added support for run times on different controller model\nLess polling for some states to reduce requests to controller",
@@ -41,7 +52,8 @@
         "it": "Aggiunto supporto per i tempi di esecuzione su diversi modelli di controller\nMeno polling per alcuni stati per ridurre le richieste al controller\n",
         "es": "Se agregó soporte para tiempos de ejecución en diferentes modelos de controlador\nMenos encuestas para algunos estados para reducir las solicitudes al controlador\n",
         "pl": "Dodano obsługę czasów uruchamiania dla różnych modeli kontrolerów\nMniejsze sondowanie w niektórych stanach w celu ograniczenia żądań do kontrolera\n",
-        "zh-cn": "增加了对不同控制器型号上运行时间的支持\n减少某些状态的轮询，以减少对控制器的请求\n"
+        "zh-cn": "增加了对不同控制器型号上运行时间的支持\n减少某些状态的轮询，以减少对控制器的请求\n",
+        "uk": "Додано підтримку часу роботи на різних моделях контролерів\nМенше опитування для деяких станів, щоб зменшити кількість запитів до контролера"
       },
       "0.2.0": {
         "en": "Added remaining irrigation time of zone\nFixed bug in decoding responses",
@@ -53,7 +65,8 @@
         "it": "Aggiunto il tempo di irrigazione residuo della zona\nBug risolto nelle risposte di decodifica",
         "es": "Se agregó el tiempo de riego restante de la zona\nSe corrigió el error en las respuestas de decodificación",
         "pl": "Dodano pozostały czas nawadniania strefy\nNaprawiono błąd w odpowiedziach na dekodowanie",
-        "zh-cn": "增加了区域的剩余灌溉时间\n修复了解码响应中的错误"
+        "zh-cn": "增加了区域的剩余灌溉时间\n修复了解码响应中的错误",
+        "uk": "Додано час поливу зони, що залишився\nВиправлена ​​помилка в декодуванні відповідей"
       },
       "0.1.2": {
         "en": "Fixed adapter stalling on connection timeout",
@@ -65,7 +78,8 @@
         "it": "Corretto lo stallo dell'adattatore al timeout della connessione",
         "es": "Se corrigió el bloqueo del adaptador en el tiempo de espera de conexión",
         "pl": "Naprawiono blokowanie adaptera po przekroczeniu limitu czasu połączenia",
-        "zh-cn": "修复了连接超时时适配器停顿的问题"
+        "zh-cn": "修复了连接超时时适配器停顿的问题",
+        "uk": "Виправлено зупинку адаптера під час очікування підключення"
       },
       "0.1.1": {
         "en": "Smaller fixes",
@@ -77,7 +91,8 @@
         "it": "Piccole correzioni",
         "es": "Pequeñas correcciones",
         "pl": "Mniejsze poprawki",
-        "zh-cn": "较小的修复"
+        "zh-cn": "较小的修复",
+        "uk": "Менші виправлення"
       }
     },
     "titleLang": {
@@ -90,7 +105,8 @@
       "it": "Controllo dell'irrigazione Rain Bird",
       "es": "Control de riego Rain Bird",
       "pl": "Kontrola nawadniania Rain Bird",
-      "zh-cn": "雨鸟灌溉控制"
+      "zh-cn": "雨鸟灌溉控制",
+      "uk": "Контроль зрошення Rain Bird"
     },
     "desc": {
       "en": "Adapter to communicate with a Rain Bird irrigation controller and LNK WiFi module attached",
@@ -102,7 +118,8 @@
       "it": "Adattatore per comunicare con un programmatore di irrigazione Rain Bird e un modulo WiFi LNK collegato",
       "es": "Adaptador para comunicarse con un controlador de riego Rain Bird y un módulo WiFi LNK conectado",
       "pl": "Dołączony adapter do komunikacji z kontrolerem nawadniania Rain Bird i modułem WiFi LNK",
-      "zh-cn": "与雨鸟灌溉控制器和连接的LNK WiFi模块通信的适配器"
+      "zh-cn": "与雨鸟灌溉控制器和连接的LNK WiFi模块通信的适配器",
+      "uk": "Адаптер для зв’язку з контролером зрошення Rain Bird і приєднаним модулем LNK WiFi"
     },
     "authors": [
       "Marius Burkard <m.burkard@pixcept.de>",

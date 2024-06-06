@@ -1,0 +1,6 @@
+{
+    "ipaddress": "IP-адреса",
+    "on save adapter restarts with new config immediately": "Після збереження адаптер негайно перезавантажується з новою конфігурацією",
+    "password": "Пароль",
+    "pollinterval": "Інтервал опитування"
+}
