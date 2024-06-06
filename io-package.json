@@ -145,7 +145,16 @@
     "compact": true,
     "connectionType": "local",
     "dataSource": "poll",
-    "dependencies": []
+    "dependencies": [
+		{
+		  "js-controller": ">=5.0.19"
+		}
+	],
+	"globalDependencies": [
+		{
+		  "admin": ">=6.13.16"
+		}
+	]
   },
   "native": {
     "ipaddress": "",
