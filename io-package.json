@@ -137,9 +137,13 @@
     ],
     "readme": "https://github.com/iobroker-community-adapters/ioBroker.rainbird/blob/master/README.md",
     "loglevel": "info",
+	"tier": 2,
     "type": "garden",
-    "license": "MIT",
-    "messagebox": true,
+    "licenseInformation": {
+		"license": "MIT",
+		"type": "free"
+	},
+	"messagebox": true,
     "materialize": true,
     "enabled": false,
     "compact": true,
