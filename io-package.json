@@ -28,58 +28,6 @@
         "pl": "Hasło jest teraz zaszyfrowane. Proszę wpisać hasło na stronie konfiguracji. Jest to wymagane tylko raz po migracji z wydania < 1.0.0 do wydania 1.0.0 lub nowszego.\nAdapter wymaga node.js 18 i sterownika js- > = 5 teraz\nAdapter został przeniesiony do organizacji adapterów iobroker- community\nAdapter- core został adapter, adapter obsługuje js- kontroler 6 teraz.\nZaktualizowano zależności",
         "uk": "BREAKING: пароля зберігається зашифровано зараз. Будь ласка, перейменуйте пароль на сторінці конфігурації. Це потрібно тільки після міграції від релізу < 1.0.0 для релізу 1.0.0 або новачка.\nАдаптер вимагає node.js 18 і js-controller >= 5 тепер\nПерехід на iobroker-community-adapters\nАдаптер-core був адаптером, адаптер підтримує js-controller 6 тепер.\nЗалежність було оновлено",
         "zh-cn": "你密码现在被加密了 请在配置页面重新输入密码 。 仅在从释放 < 1.0.0到释放1.0.0或更新后需要一次.\n适配器需要节点.js 18和js控制器 QQ 现在5号\n适应者被转移到了职业经纪人-社区适应者组织\n适配器核心一直是适配器,适配器现在支持js控制器6.\n依赖关系已更新"
-      },
-      "0.2.3": {
-        "en": "Fixed problem with sensor data\nAdded seasonal water budget adjust information\nOnly show datapoints for available stations",
-        "de": "Problem mit Sensordaten behoben\nInformationen zur saisonalen Wasserbudgetanpassung hinzugefügt\nZeigt nur Datenpunkte für verfügbare Stationen an",
-        "ru": "Исправлена ​​проблема с данными датчиков\nДобавлена ​​информация о корректировке сезонного водного баланса.\nПоказывать только точки данных для доступных станций",
-        "pt": "Corrigido problema com dados do sensor\nAdicionadas informações de ajuste do orçamento sazonal de água\nMostrar apenas pontos de dados para estações disponíveis",
-        "nl": "Probleem met sensorgegevens opgelost\nInformatie over het aanpassen van het seizoensgebonden waterbudget toegevoegd\nToon alleen datapunten voor beschikbare stations",
-        "fr": "Problème résolu avec les données du capteur\nAjout d’informations sur l’ajustement du budget hydrique saisonnier\nAfficher uniquement les points de données pour les stations disponibles",
-        "it": "Risolto problema con i dati del sensore\nAggiunte informazioni sulla regolazione del budget idrico stagionale\nMostra solo i punti dati per le stazioni disponibili",
-        "es": "Problema solucionado con los datos del sensor.\nSe agregó información de ajuste del presupuesto de agua estacional.\nMostrar solo puntos de datos para estaciones disponibles",
-        "pl": "Naprawiono problem z danymi czujnika\nDodano informacje o sezonowych korektach budżetu wodnego\nPokazuj tylko punkty danych dla dostępnych stacji",
-        "uk": "Виправлена ​​проблема з даними датчика\nДодано інформацію про коригування сезонного бюджету води\nПоказувати дані тільки для доступних станцій",
-        "zh-cn": "修复了传感器数据的问题\n添加季节性用水预算调整信息\n仅显示可用站点的数据点"
-      },
-      "0.2.2": {
-        "en": "Added fixes for adapter crashes on failed connection to controller",
-        "de": "Korrekturen für Adapterabstürze bei fehlgeschlagener Verbindung zum Controller hinzugefügt",
-        "ru": "Добавлены исправления для сбоев адаптера при сбое подключения к контроллеру",
-        "pt": "Correções adicionadas para falhas do adaptador em falha na conexão com o controlador",
-        "nl": "Er zijn oplossingen toegevoegd voor adaptercrashes bij een mislukte verbinding met de controller",
-        "fr": "Ajout de correctifs pour les plantages de l'adaptateur en cas d'échec de connexion au contrôleur",
-        "it": "Aggiunte correzioni per crash dell'adattatore in caso di connessione fallita al controller",
-        "es": "Se agregaron correcciones para fallas del adaptador al fallar la conexión al controlador",
-        "pl": "Dodano poprawki awarii adaptera w przypadku nieudanego połączenia ze sterownikiem",
-        "zh-cn": "添加了针对适配器与控制器连接失败时崩溃的修复程序",
-        "uk": "Додано виправлення збоїв адаптера при невдалому підключенні до контролера"
-      },
-      "0.2.1": {
-        "en": "Added support for run times on different controller model\nLess polling for some states to reduce requests to controller",
-        "de": "Unterstützung für Laufzeiten auf anderem Controller-Modell hinzugefügt\nWeniger Abfragen für einige Datenpunkte, um Anforderungen an den Controller zu reduzieren\n",
-        "ru": "Добавлена поддержка времени выполнения на другой модели контроллера\nМеньше опроса для некоторых штатов, чтобы уменьшить количество запросов к контроллеру\n",
-        "pt": "Adicionado suporte para tempos de execução em diferentes modelos de controladores\nMenos pesquisas para alguns estados para reduzir solicitações ao controlador\n",
-        "nl": "Ondersteuning toegevoegd voor looptijden op verschillende controllermodellen\nMinder polling voor sommige staten om verzoeken aan de controller te verminderen\n",
-        "fr": "Ajout de la prise en charge des temps d'exécution sur différents modèles de contrôleurs\nMoins d'interrogation pour certains États afin de réduire les demandes au contrôleur\n",
-        "it": "Aggiunto supporto per i tempi di esecuzione su diversi modelli di controller\nMeno polling per alcuni stati per ridurre le richieste al controller\n",
-        "es": "Se agregó soporte para tiempos de ejecución en diferentes modelos de controlador\nMenos encuestas para algunos estados para reducir las solicitudes al controlador\n",
-        "pl": "Dodano obsługę czasów uruchamiania dla różnych modeli kontrolerów\nMniejsze sondowanie w niektórych stanach w celu ograniczenia żądań do kontrolera\n",
-        "zh-cn": "增加了对不同控制器型号上运行时间的支持\n减少某些状态的轮询，以减少对控制器的请求\n",
-        "uk": "Додано підтримку часу роботи на різних моделях контролерів\nМенше опитування для деяких станів, щоб зменшити кількість запитів до контролера"
-      },
-      "0.2.0": {
-        "en": "Added remaining irrigation time of zone\nFixed bug in decoding responses",
-        "de": "Verbleibende Bewässerungszeit der Zone hinzugefügt\nFehler beim Dekodieren von Antworten behoben",
-        "ru": "Добавлено оставшееся время полива зоны\nИсправлена ошибка в расшифровке ответов",
-        "pt": "Adicionado tempo de irrigação restante da zona\nCorrigido o erro nas respostas de decodificação",
-        "nl": "Resterende irrigatietijd van zone toegevoegd\nBug opgelost bij het decoderen van reacties",
-        "fr": "Ajout du temps d'irrigation restant de la zone\nCorrection d'un bug dans le décodage des réponses",
-        "it": "Aggiunto il tempo di irrigazione residuo della zona\nBug risolto nelle risposte di decodifica",
-        "es": "Se agregó el tiempo de riego restante de la zona\nSe corrigió el error en las respuestas de decodificación",
-        "pl": "Dodano pozostały czas nawadniania strefy\nNaprawiono błąd w odpowiedziach na dekodowanie",
-        "zh-cn": "增加了区域的剩余灌溉时间\n修复了解码响应中的错误",
-        "uk": "Додано час поливу зони, що залишився\nВиправлена ​​помилка в декодуванні відповідей"
       }
     },
     "titleLang": {
