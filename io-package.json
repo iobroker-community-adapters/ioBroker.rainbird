@@ -73,6 +73,9 @@
     "readme": "https://github.com/iobroker-community-adapters/ioBroker.rainbird/blob/master/README.md",
     "loglevel": "info",
     "tier": 2,
+    "adminUI": {
+      "config": "json"
+    },
     "type": "garden",
     "licenseInformation": {
       "license": "MIT",
