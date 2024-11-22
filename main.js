@@ -96,13 +96,14 @@ function startAdapter(options) {
 			adapter.log.info('[START] Starting Rain Bird adapter V' + adapterVersion + '' + patchVersion);
 			adapter.setState('info.connection', true, true);
 			adapter.getForeignObject('system.config', (err, obj) => {
-				if (obj && obj.native && obj.native.secret) {
+				/*if (obj && obj.native && obj.native.secret) {
 					//noinspection JSUnresolvedVariable
-					adapter.config.password = ioBLib.decrypt(obj.native.secret, adapter.config.password);
+					//adapter.config.password = ioBLib.decrypt(obj.native.secret, adapter.config.password);
+
 				} else {
 					//noinspection JSUnresolvedVariable
-					adapter.config.password = ioBLib.decrypt('Zgfr56gFe87jJOM', adapter.config.password);
-				}
+					//adapter.config.password = ioBLib.decrypt('Zgfr56gFe87jJOM', adapter.config.password);
+				}*/
 
 				main();
 			});

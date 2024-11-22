@@ -2,16 +2,11 @@
     "type": "panel",
     "i18n": true,
     "items": {
-        "dividerHdr": {
+        "header": {
             "newLine": true,
             "type": "header",
             "text": "Rainbird",
-            "size":"2",
-            "xs": 12,
-            "sm": 12,
-            "md": 12,
-            "lg": 12,
-            "xl": 12
+            "size": 2
         },
         "ipaddress": {
             "type": "text",
