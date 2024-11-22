@@ -1,21 +1,8 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "1.0.2",
-    "news": {
-      "1.0.2": {
-        "en": "BREAKING: Thee password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 1.0.2 to release 1.0.2 or newer.\\nswitch adapter config to jsonconfig\n",
-        "de": "BREAKING: Ihr Passwort wird jetzt verschlüsselt gespeichert. Bitte geben Sie Ihr Passwort auf der Konfigurationsseite ein. Dies ist nur einmal nach der Migration von Release < 1.0.2 bis Release 1.0.2 oder neuer erforderlich. \\nswitch Adapter mit jsonconfig\n",
-        "ru": "Зашифрованный пароль. Пожалуйста, введите пароль на странице настройки. Это требуется только один раз после перехода от релиза < 1.0.2 к выпуску 1.0.2 или более новому. \\nswitch адаптер настройки для jsonconfig\n",
-        "pt": "BREAKING: A senha é armazenada criptografada agora. Por favor, volte a inserir a senha na página de configuração. Isso é necessário apenas uma vez após a migração do lançamento < 1.0.2 para liberar 1.0.2 ou mais recente. \\nswitch adaptador config para jsonconfig\n",
-        "nl": "Je wachtwoord wordt nu versleuteld opgeslagen. Voer uw wachtwoord opnieuw in op de configuratiepagina. Dit is slechts eenmaal nodig na migratie van afgifte < 1.0.2 om 1.0.2 of nieuwer vrij te geven. \\nswitch-adapterconfiguratie naar jsonconfig\n",
-        "fr": "Le mot de passe est maintenant crypté. Veuillez entrer de nouveau votre mot de passe à la page de configuration. Ceci n'est nécessaire qu'une seule fois après la migration de la libération < 1.0.2 à la libération 1.0.2 ou plus récente. Configuration de l'adaptateur \\nswitch à jsonconfig\n",
-        "it": "BREAKING: La password viene archiviata ora. Si prega di reinserire la password nella pagina di configurazione. Ciò è richiesto solo una volta dopo la migrazione dal rilascio < 1.0.2 per rilasciare 1.0.2 o più recente. \\nswitch adattatore configurazione a jsonconfig\n",
-        "es": "BREAKING: Tu contraseña se almacena encriptada ahora. Por favor vuelva a introducir su contraseña en la página de configuración. Esto se requiere sólo una vez después de la migración de la liberación < 1.0.2 para liberar 1.0.2 o más. \\nswitch adaptador config a jsonconfig\n",
-        "pl": "Hasło jest teraz zaszyfrowane. Proszę wpisać hasło na stronie konfiguracji. Jest to wymagane tylko raz po migracji z wydania < 1.0.2 do wydania 1.0.2 lub nowszego.\\ nswitch adapter config do jsonconfig\n",
-        "uk": "BREAKING: пароля зберігається зашифровано зараз. Будь ласка, перейменуйте пароль на сторінці конфігурації. Це потрібно тільки після міграції від релізу < 1.0.2 для релізу 1.0.2 або новачка. \\nswitch адаптер налаштування до jsonconfig\n",
-        "zh-cn": "你密码现在被加密了 请在配置页面重新输入密码 。 仅在从释放 < 1.0.2到释放1.0.2或更新之后,才需要一次。 \\nswitch 适配器配置到json配置\n"
-      },      
+    "version": "1.0.1",
+    "news": {    
       "1.0.1": {
         "en": "Adapter requires node.js 18 and js-controller >= 5 now\nAdapter has been move to iobroker-community-adapters organization\nAdapter-core has been adapter, adapter supports js-controller 6 now.\nDependencies have been updated",
         "de": "Adapter benötigt node.js 18 und js-controller >= 5 jetzt\nAdapter wurde auf iobroker-community-Adapter Organisation verschoben\nAdapter-Kern ist Adapter, Adapter unterstützt jetzt js-controller 6.\nAbhängigkeiten wurden aktualisiert",
