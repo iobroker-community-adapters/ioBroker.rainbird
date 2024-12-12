@@ -95,26 +95,27 @@ function startAdapter(options) {
 		} else {
 			adapter.log.info('[START] Starting Rain Bird adapter V' + adapterVersion + '' + patchVersion);
 			adapter.setState('info.connection', true, true);
-			adapter.getForeignObject('system.config', (err, obj) => {
+			// adapter.getForeignObject('system.config', (err, obj) => {
 				
-				//Not necessary any more after changing to jsonconfig and password stored encrypted in io-packages.json:
-				/*if (obj && obj.native && obj.native.secret) {
-					//noinspection JSUnresolvedVariable
-					//adapter.config.password = ioBLib.decrypt(obj.native.secret, adapter.config.password);
+			// 	//Not necessary any more after changing to jsonconfig and password stored encrypted in io-packages.json:
+			// 	/*if (obj && obj.native && obj.native.secret) {
+			// 		//noinspection JSUnresolvedVariable
+			// 		//adapter.config.password = ioBLib.decrypt(obj.native.secret, adapter.config.password);
 
-				} else {
-					//noinspection JSUnresolvedVariable
-					//adapter.config.password = ioBLib.decrypt('Zgfr56gFe87jJOM', adapter.config.password);
-				}*/
+			// 	} else {
+			// 		//noinspection JSUnresolvedVariable
+			// 		//adapter.config.password = ioBLib.decrypt('Zgfr56gFe87jJOM', adapter.config.password);
+			// 	}*/
 
-				main();
-			});
+			// 	main();
+			// });
+
+			main();
 		}
 	});
 
 	return adapter;
 }
-
 
 function main() {
 	deviceIpAdress = adapter.config.ipaddress;

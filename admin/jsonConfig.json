@@ -38,19 +38,6 @@
             "md": 6,
             "lg": 4,
             "xl": 4
-        },
-        "staticTextNote": {
-            "type": "staticText",
-            "label": "on save adapter restarts with new config immediately",
-            "style": {
-                "fontSize": 16
-            },
-            "newLine": true,
-            "xs": 12,
-            "sm": 12,
-            "md": 6,
-            "lg": 6,
-            "xl": 6
         }
     }
   }

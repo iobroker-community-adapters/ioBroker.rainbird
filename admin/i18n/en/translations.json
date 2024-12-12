@@ -1,6 +1,5 @@
 {
-    "ipaddress": "Ip address",
-    "on save adapter restarts with new config immediately": "On save adapter restarts with new config immediately",
+    "ipaddress": "IP address",
     "password": "Password",
     "pollinterval": "Polling interval"
 }
