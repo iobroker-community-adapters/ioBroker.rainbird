@@ -46,7 +46,7 @@ This adapter would not have been possible without the great work of Marius Burka
 	Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 2.0.0-alpha.0 (2024-12-12)
 * (Feuersturm) BREAKING: The password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 2.0.0 to release 2.0.0 or newer.
 * (mcm1957) Adapter requires node.js 20 now
 * (mcm1957) Adapter requires js-controller 5 and admin 6  now
@@ -71,11 +71,6 @@ This adapter would not have been possible without the great work of Marius Burka
 
 -   Added support for run times on different controller model
 -   Less polling for some states to reduce requests to controller
-
-### 0.2.0
-
--   Added remaining irrigation time of zone
--   Fixed bug in decoding responses
 
 ## License
 
