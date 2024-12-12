@@ -48,8 +48,10 @@ This adapter would not have been possible without the great work of Marius Burka
 -->
 ### WORK IN PROGRESS
 * (Feuersturm) BREAKING: The password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 2.0.0 to release 2.0.0 or newer.
+* (mcm1957) Adapter requires node.js 20 now
+* (mcm1957) Adapter requires js-controller 5 and admin 6  now
 * (Feuersturm) switch adapter config to jsonconfig
-
+* (mcm1957) Dependencies have been updated
 
 ### 1.0.1 (2024-06-06)
 * (mcm1957) Adapter requires node.js 18 and js-controller >= 5 now
