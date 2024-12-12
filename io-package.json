@@ -82,7 +82,6 @@
       "type": "free"
     },
     "messagebox": true,
-    "materialize": true,
     "enabled": false,
     "compact": true,
     "connectionType": "local",
