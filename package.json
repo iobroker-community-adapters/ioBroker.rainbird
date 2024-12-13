@@ -1,6 +1,6 @@
 {
   "name": "iobroker.rainbird",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0",
   "description": "rain bird",
   "author": {
     "name": "Marius Burkard",

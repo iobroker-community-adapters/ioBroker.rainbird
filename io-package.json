@@ -1,11 +1,11 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.0.0-alpha.0",
+    "version": "2.0.0",
     "news": {
-      "2.0.0-alpha.0": {
+      "2.0.0": {
         "en": "BREAKING: The password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 2.0.0 to release 2.0.0 or newer.\nAdapter requires node.js 20 now\nAdapter requires js-controller 5 and admin 6  now\nswitch adapter config to jsonconfig\nDependencies have been updated",
-        "de": "BREAKING: Das Passwort wird jetzt verschlüsselt gespeichert. Bitte geben Sie Ihr Passwort auf der Konfigurationsseite ein. Dies ist nur einmal nach der Migration von Release < 2.0.0 bis Release 2.0.0 oder neuer erforderlich.\nAdapter benötigt node.js 20 jetzt\nAdapter benötigt jetzt js-controller 5 und admin 6\nschalteradapter config zu jsonconfig\nAbhängigkeiten wurden aktualisiert",
+        "de": "BREAKING: Das Passwort wird jetzt verschlüsselt gespeichert. Bitte geben Sie Ihr Passwort auf der Konfigurationsseite ein. Dies ist nur einmal nach der Migration von Release < 2.0.0 bis Release 2.0.0 oder neuer erforderlich.\nAdapter benötigt node.js 20 jetzt\nAdapter benötigt jetzt js-controller 5 und admin 6\nAdapter config wurde auf jsonconfig umgestellt.\nAbhängigkeiten wurden aktualisiert",
         "ru": "Пароль теперь зашифрован. Пожалуйста, введите пароль на странице настройки. Это требуется только один раз после перехода от релиза < 2.0.0 к выпуску 2.0.0 или более новым.\nАдаптер требует node.js 20\nАдаптер требует js-контроллер 5 и admin 6 сейчас\nнастройка адаптера для jsonconfig\nЗависимость обновлена",
         "pt": "BREAKING: A senha é armazenada criptografada agora. Por favor, volte a inserir a senha na página de configuração. Isso é necessário apenas uma vez após a migração do lançamento < 2.0.0 para liberar 2.0.0 ou mais recente.\nAdaptador requer node.js 20 agora\nAdaptador requer js-controller 5 e admin 6 agora\nadaptador de interruptor config para jsonconfig\nAs dependências foram atualizadas",
         "nl": "Het wachtwoord wordt nu versleuteld opgeslagen. Voer uw wachtwoord opnieuw in op de configuratiepagina. Dit is slechts eenmaal nodig na migratie van afgifte < 2.0.0 om 2.0.0 of nieuwer vrij te geven.\nAdapter vereist node.js 20 nu\nAdapter vereist js-controller 5 en admin 6 nu\nswitch adapter config naar jsonconfig\nAfhankelijkheden zijn bijgewerkt",
