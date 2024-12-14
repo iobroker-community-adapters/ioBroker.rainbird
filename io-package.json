@@ -132,17 +132,17 @@
           "uk": "Важливе повідомлення!"
         },
         "text": {
-          "en": "The password is stored encrypted starting with release 1.0.2. Please open configuration page and reenter your password again. This action is required only once.",
-          "de": "Das Passwort wird ab Release 1.0.2 verschlüsselt gespeichert. Bitte öffnen Sie die Konfigurationsseite und geben Sie Ihr Passwort erneut ein. Diese Aktion ist nur einmal erforderlich.",
-          "ru": "Пароль хранится зашифрованным, начиная с релиза 1.0.2. Пожалуйста, откройте страницу настройки и снова введите свой пароль. Это действие требуется только один раз.",
-          "pt": "A senha é armazenada criptografada começando com a versão 1.0.2. Por favor, abra a página de configuração e reinsira sua senha novamente. Esta ação é necessária apenas uma vez.",
-          "nl": "Het wachtwoord wordt versleuteld opgeslagen, te beginnen met release 1.0.2. Open de configuratiepagina en voer uw wachtwoord opnieuw in. Deze actie is slechts één keer nodig.",
-          "fr": "Le mot de passe est stocké crypté à partir de la version 1.0.2. Veuillez ouvrir la page de configuration et réentrer votre mot de passe. Cette mesure n'est requise qu'une seule fois.",
-          "it": "La password viene memorizzata a partire dal rilascio 1.0.2. Si prega di aprire la pagina di configurazione e reinserire nuovamente la password. Questa azione è richiesta solo una volta.",
-          "es": "La contraseña se almacena encriptada comenzando con el lanzamiento 1.0.0. Por favor, abra la página de configuración y vuelva a introducir su contraseña. Esta acción sólo se requiere una vez.",
-          "pl": "Hasło jest zapisywane zaszyfrowane począwszy od wydania 1.0.2. Proszę otworzyć stronę konfiguracji i ponownie wprowadzić hasło. Działanie to jest wymagane tylko raz.",
-          "uk": "Зашифрований пароль з релізом 1.0.2. Введіть номер мобільного, який Ви вказали при укладаннi договору з нами Ця дія потрібна тільки один раз.",
-          "zh-cn": "密码是从1.0.2发布开始的加密存储. 请打开配置页面并再次输入密码 。 只需采取这一行动一次."
+          "en": "The password is stored encrypted starting with release 2.0.0. Please open configuration page and reenter your password again. This action is required only once.",
+          "de": "Das Passwort wird ab Release 2.0.0 verschlüsselt gespeichert. Bitte öffnen Sie die Konfigurationsseite und geben Sie Ihr Passwort erneut ein. Diese Aktion ist nur einmal erforderlich.",
+          "ru": "Пароль хранится зашифрованным, начиная с релиза 2.0.0. Пожалуйста, откройте страницу настройки и снова введите свой пароль. Это действие требуется только один раз.",
+          "pt": "A senha é armazenada criptografada começando com a versão 2.0.0. Por favor, abra a página de configuração e reinsira sua senha novamente. Esta ação é necessária apenas uma vez.",
+          "nl": "Het wachtwoord wordt versleuteld opgeslagen, te beginnen met release 2.0.0. Open de configuratiepagina en voer uw wachtwoord opnieuw in. Deze actie is slechts één keer nodig.",
+          "fr": "Le mot de passe est stocké crypté à partir de la version 2.0.0. Veuillez ouvrir la page de configuration et réentrer votre mot de passe. Cette mesure n'est requise qu'une seule fois.",
+          "it": "La password viene memorizzata a partire dal rilascio 2.0.0. Si prega di aprire la pagina di configurazione e reinserire nuovamente la password. Questa azione è richiesta solo una volta.",
+          "es": "La contraseña se almacena encriptada comenzando con el lanzamiento 2.0.0. Por favor, abra la página de configuración y vuelva a introducir su contraseña. Esta acción sólo se requiere una vez.",
+          "pl": "Hasło jest zapisywane zaszyfrowane począwszy od wydania 2.0.0. Proszę otworzyć stronę konfiguracji i ponownie wprowadzić hasło. Działanie to jest wymagane tylko raz.",
+          "uk": "Зашифрований пароль з релізом 2.0.0. Введіть номер мобільного, який Ви вказали при укладаннi договору з нами Ця дія потрібна тільки один раз.",
+          "zh-cn": "密码是从2.0.0发布开始的加密存储. 请打开配置页面并再次输入密码 。 只需采取这一行动一次."
         },
         "link": "https://github.com/iobroker-community-adapters/ioBroker.rainbird#changelog",
         "level": "warn",
