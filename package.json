@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.2.3",
-    "@strathcole/iob-lib": "^0.1.2",
     "request": "^2.88.0"
   },
   "devDependencies": {
