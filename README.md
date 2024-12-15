@@ -46,7 +46,7 @@ This adapter would not have been possible without the great work of Marius Burka
 	Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 2.0.1 (2024-12-15)
 * (Feuersturm) Some minor corrections to installations news and some internal changes at pacakging have been applied.
 
 ### 2.0.0 (2024-12-13)
@@ -69,11 +69,6 @@ This adapter would not have been possible without the great work of Marius Burka
 ### 0.2.2
 
 -   Added fixes for adapter crashes on failed connection to controller
-
-### 0.2.1
-
--   Added support for run times on different controller model
--   Less polling for some states to reduce requests to controller
 
 ## License
 

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "news": {
+      "2.0.1": {
+        "en": "Some minor corrections to installations news and some internal changes at packging have been applied.",
+        "de": "Einige kleinere Korrekturen der News im Zuge der Installation und einige interne Änderungen am Packaging wurden vorgenommen.",
+        "ru": "Были применены некоторые незначительные исправления к новостям об установках и некоторые внутренние изменения при остановке.",
+        "pt": "Foram aplicadas algumas correções menores às notícias das instalações e algumas mudanças internas no pacakging.",
+        "nl": "Er zijn enkele kleine correcties toegepast op het installatienieuws en enkele interne veranderingen tijdens de pacaking.",
+        "fr": "Quelques corrections mineures aux nouvelles des installations et quelques changements internes au pacakging ont été appliqués.",
+        "it": "Sono state applicate alcune piccole correzioni alle notizie delle installazioni e alcune modifiche interne al pacakging.",
+        "es": "Se han aplicado algunas correcciones menores a las noticias de las instalaciones y algunos cambios internos en la pacakging.",
+        "pl": "Zastosowano pewne drobne korekty w instalacjach wiadomości i pewne zmiany wewnętrzne przy pakaksowaniu.",
+        "uk": "Наведено незначні корекції для встановлення новин та деяких внутрішніх змін при пакуванні.",
+        "zh-cn": "对设施新闻进行了一些小的更正,并对内部进行了一些改动."
+      },
       "2.0.0": {
         "en": "BREAKING: The password is stored encrypted now. Please reenter you password at configuration page. This is required only once after migration from release < 2.0.0 to release 2.0.0 or newer.\nAdapter requires node.js 20 now\nAdapter requires js-controller 5 and admin 6  now\nswitch adapter config to jsonconfig\nDependencies have been updated",
         "de": "BREAKING: Das Passwort wird jetzt verschlüsselt gespeichert. Bitte geben Sie Ihr Passwort auf der Konfigurationsseite ein. Dies ist nur einmal nach der Migration von Release < 2.0.0 bis Release 2.0.0 oder neuer erforderlich.\nAdapter benötigt node.js 20 jetzt\nAdapter benötigt jetzt js-controller 5 und admin 6\nAdapter config wurde auf jsonconfig umgestellt.\nAbhängigkeiten wurden aktualisiert",

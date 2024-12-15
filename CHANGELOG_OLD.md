@@ -1,4 +1,9 @@
 # Older Changelogs
+## 0.2.1
+
+-   Added support for run times on different controller model
+-   Less polling for some states to reduce requests to controller
+
 ## 0.2.0
 
 -   Added remaining irrigation time of zone
