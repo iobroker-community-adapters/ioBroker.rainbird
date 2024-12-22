@@ -1,7 +1,7 @@
 'use strict';
 
 const utils = require('@iobroker/adapter-core'); // Get common adapter utils
-const ioBLib = require('@strathcole/iob-lib').ioBLib;
+const ioBLib = require('./lib/iob-lib');
 
 const rainbird = require('./lib/rainbird');
 
