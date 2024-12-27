@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "news": {
+      "2.0.2": {
+        "en": "@strathcole/iob-lib has been migrated to local repository (#27)\nDependencies have been updated",
+        "de": "@strathcole/iob-lib wurde zum lokalen repository migriert (#27)\nAbhängigkeiten wurden aktualisiert",
+        "ru": "@strathcole/iob-lib был перенесен в местное хранилище (#27)\nЗависимость обновлена",
+        "pt": "@strathcole/iob-lib foi migrado para o repositório local (#27)\nAs dependências foram atualizadas",
+        "nl": "@strathcole/iob-lib is gemigreerd naar lokale repository (#27)\nAfhankelijkheden zijn bijgewerkt",
+        "fr": "@strathcole/iob-lib a été migré vers le dépôt local (#27)\nLes dépendances ont été actualisées",
+        "it": "@strathcole/iob-lib è stato migrato nel repository locale (#27)\nLe dipendenze sono state aggiornate",
+        "es": "@strathcole/iob-lib ha sido migrado al repositorio local (#27)\nSe han actualizado las dependencias",
+        "pl": "@ strathcole / iob- lib został przeniesiony do lokalnego repozytorium (# 27)\nZaktualizowano zależności",
+        "uk": "@strathcole/iob-lib був мігрований до місцевих репозиторій (#27)\nЗалежність було оновлено",
+        "zh-cn": "@strathcole/iob-lib 已迁移到本地仓库(# 27)\n依赖关系已更新"
+      },
       "2.0.1": {
         "en": "Some minor corrections to installations news and some internal changes at packging have been applied.",
         "de": "Einige kleinere Korrekturen der News im Zuge der Installation und einige interne Änderungen am Packaging wurden vorgenommen.",

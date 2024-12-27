@@ -1,4 +1,8 @@
 # Older Changelogs
+## 0.2.2
+
+-   Added fixes for adapter crashes on failed connection to controller
+
 ## 0.2.1
 
 -   Added support for run times on different controller model
