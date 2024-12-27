@@ -48,7 +48,8 @@ This adapter would not have been possible without the great work of Marius Burka
 -->
 
 ### **WORK IN PROGRESS**
-* (Feuersturm) Migrate @strathcole/iob-lib to local repository (#27)
+* (Feuersturm) @strathcole/iob-lib has been migrated to local repository (#27)
+* (mcm1957) Dependencies have been updated
 
 ### 2.0.1 (2024-12-15)
 * (Feuersturm) Some minor corrections to installations news and some internal changes at pacakging have been applied.
