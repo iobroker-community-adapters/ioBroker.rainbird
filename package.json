@@ -2,10 +2,7 @@
   "name": "iobroker.rainbird",
   "version": "2.0.2",
   "description": "rain bird",
-  "author": {
-    "name": "Marius Burkard",
-    "email": "m.burkard@pixcept.de"
-  },
+  "author": "Marius Burkard <m.burkard@pixcept.de>",
   "contributors": [
     "Marius Burkard <m.burkard@pixcept.de>",
     "mcm1957 <iobroker-community-adapters@gmx.de"
