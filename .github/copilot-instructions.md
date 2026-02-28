@@ -1,6 +1,6 @@
 # ioBroker Adapter Development with GitHub Copilot
 
-**Version:** 0.5.6  
+**Version:** 0.5.7  
 **Template Source:** https://github.com/DrozmotiX/ioBroker-Copilot-Instructions
 
 This file contains instructions and best practices for GitHub Copilot when working on ioBroker adapter development.
@@ -629,10 +629,15 @@ Follow the [AlCalzone release-script](https://github.com/AlCalzone/release-scrip
 ```markdown
 # Changelog
 
+<!--
+  Placeholder for the next version (at the beginning of the line):
+  ## **WORK IN PROGRESS**
+-->
+
 ## **WORK IN PROGRESS**
 
--   Did some changes
--   Did some more changes
+- (author) **NEW**: Added new feature X
+- (author) **FIXED**: Fixed bug Y (fixes #25)
 
 ## v0.1.0 (2023-01-01)
 Initial release
