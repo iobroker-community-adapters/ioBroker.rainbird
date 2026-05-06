@@ -4,6 +4,7 @@ const utils = require('@iobroker/adapter-core'); // Get common adapter utils
 const ioBLib = require('./lib/iob-lib');
 
 const rainbird = require('./lib/rainbird');
+const rainbirdPyrainbird = require('./lib/rainbird-pyrainbird');
 
 const packageJson = require('./package.json');
 // const adapterName = packageJson.name.split('.').pop();
@@ -142,7 +143,16 @@ function main() {
     ioBLib.setOrUpdateState('device.commands.runProgram', 'Run program manually', null, '', 'number', 'level');
     ioBLib.setOrUpdateState('device.commands.stopIrrigation', 'Stop irrigation', false, '', 'boolean', 'button.stop');
 
-    controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, adapter);
+    // Choose implementation based on configuration
+    const usePyrainbird = adapter.config.usePyrainbird !== false; // Default to true
+    
+    if (usePyrainbird) {
+        adapter.log.info('[INFO] Using pyrainbird Python library');
+        controller = new rainbirdPyrainbird.RainbirdController(deviceIpAdress, devicePassword, adapter);
+    } else {
+        adapter.log.info('[INFO] Using legacy JavaScript implementation');
+        controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, adapter);
+    }
 
     pollStates();
 }

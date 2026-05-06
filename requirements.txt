@@ -1,0 +1,2 @@
+pyrainbird>=6.0.0,<6.3
+aiohttp>=3.9.0

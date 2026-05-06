@@ -2,5 +2,7 @@
     "ipaddress": "IP-Adresse",
     "on save adapter restarts with new config immediately": "Beim Speichern wird der Adapter sofort mit der neuen Konfiguration neu gestartet",
     "password": "Passwort",
-    "pollinterval": "Abrufintervall"
+    "pollinterval": "Abrufintervall",
+    "usePyrainbird": "Pyrainbird-Bibliothek verwenden",
+    "usePyrainbirdHelp": "Verwenden Sie die offizielle Python-Bibliothek pyrainbird (empfohlen). Benötigt Python 3 mit installiertem pyrainbird. Deaktivieren Sie diese Option, um die ältere JavaScript-Implementierung zu verwenden."
 }

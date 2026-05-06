@@ -59,9 +59,11 @@
     "www/",
     "io-package.json",
     "LICENSE",
-    "main.js"
+    "main.js",
+    "requirements.txt"
   ],
   "scripts": {
+    "install": "python3 -m pip install -r requirements.txt --user || echo 'Warning: Failed to install Python dependencies. Please install pyrainbird manually.'",
     "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
     "test:package": "mocha test/package --exit",
     "test:integration": "mocha test/integration --exit",

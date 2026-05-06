@@ -1,5 +1,7 @@
 {
     "ipaddress": "IP address",
     "password": "Password",
-    "pollinterval": "Polling interval"
+    "pollinterval": "Polling interval",
+    "usePyrainbird": "Use pyrainbird library",
+    "usePyrainbirdHelp": "Use the official Python pyrainbird library (recommended). Requires Python 3 with pyrainbird installed. Uncheck to use the legacy JavaScript implementation."
 }

@@ -48,9 +48,20 @@ This adapter would not have been possible without the great work of Marius Burka
 -->
 
 ### **WORK IN PROGRESS**
+- (update) Migrated to use the official pyrainbird Python library (v6.3.1+) for better maintainability
+- (update) Added Python dependency bridge for pyrainbird integration
+- (update) All existing features remain functional with new implementation
 - (copilot) Adapter requires admin >= 7.7.22 now
 - (copilot) Adapter requires js-controller >= 6.0.11 now
 - (copilot) Adapter requires admin >= 7.6.17 now
+
+#### Installation Requirements
+
+This adapter now requires Python 3 with the pyrainbird library. The library will be automatically installed during npm install, but you can also install it manually:
+
+```bash
+pip3 install pyrainbird>=6.3.1
+```
 
 ### 2.0.2 (2024-12-27)
 * (Feuersturm) @strathcole/iob-lib has been migrated to local repository (#27)
