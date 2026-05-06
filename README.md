@@ -77,6 +77,8 @@ This adapter would not have been possible without the great work of Marius Burka
 -   Fixed problem with sensor data
 -   Added seasonal water budget adjust information
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 The MIT License (MIT)
