@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "news": {
       "2.0.2": {
         "en": "@strathcole/iob-lib has been migrated to local repository (#27)\nDependencies have been updated",
