@@ -18,6 +18,21 @@
             "lg": 4,
             "xl": 4
         },
+        "protocol": {
+            "type": "select",
+            "label": "protocol",
+            "newLine": true,
+            "options": [
+                { "value": "http", "label": "HTTP" },
+                { "value": "https", "label": "HTTPS" }
+            ],
+            "default": "http",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4
+        },
         "password": {
             "type": "password",
             "label": "password",

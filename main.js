@@ -143,6 +143,8 @@ function main() {
     ioBLib.setOrUpdateState('device.commands.stopIrrigation', 'Stop irrigation', false, '', 'boolean', 'button.stop');
 
     controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, adapter);
+    // Set protocol based on config (default http)
+    controller.protocol = adapter.config.protocol || 'http';
 
     pollStates();
 }
