@@ -1,21 +1,8 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.0.3",
+    "version": "2.0.2",
     "news": {
-      "2.0.3": {
-        "en": "Extension to support Rain Bird controllers that have been migrated to the IQ4 Cloud",
-        "de": "Erweiterung zur Unterstüzung von Rainbird Controller, die auf die IQ4 Cloud mitgriert wurden",
-        "ru": "Расширение для поддержки контроллеров Rain Bird, перенесённых в облако IQ4",
-        "pt": "Extensão para suporte a controladores Rain Bird migrados para a nuvem IQ4",
-        "nl": "Uitbreiding ter ondersteuning van Rain Bird-controllers die naar de IQ4 Cloud zijn gemigreerd",
-        "fr": "Extension pour la prise en charge des contrôleurs Rain Bird migrés vers le cloud IQ4",
-        "it": "Estensione per il supporto dei controller Rain Bird migrati al cloud IQ4",
-        "es": "Extensión para admitir controladores Rain Bird migrados a la nube IQ4",
-        "pl": "Rozszerzenie obsługi sterowników Rain Bird przeniesionych do chmury IQ4",
-        "uk": "Розширення для підтримки контролерів Rain Bird, перенесених у хмару IQ4",
-        "zh-cn": "扩展支持已迁移到 IQ4 云的 Rain Bird 控制器"
-      },
       "2.0.2": {
         "en": "@strathcole/iob-lib has been migrated to local repository (#27)\nDependencies have been updated",
         "de": "@strathcole/iob-lib wurde zum lokalen repository migriert (#27)\nAbhängigkeiten wurden aktualisiert",
