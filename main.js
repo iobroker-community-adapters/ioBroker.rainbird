@@ -131,6 +131,7 @@ function main() {
 
     adapter.log.info(`[INFO] Configured polling interval: ${pollingTime}`);
     adapter.log.debug(`[START] Started Adapter with: ${adapter.config.ipaddress}`);
+    adapter.log.debug(`[START] Started Adapter with protocol: ${adapter.config.protocol}`);
 
     adapter.subscribeStates('*');
 
