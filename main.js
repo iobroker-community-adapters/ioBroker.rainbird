@@ -14,6 +14,7 @@ const patchVersion = 'r44';
 let adapter;
 let deviceIpAdress;
 let devicePassword;
+let deviceProtocol;
 
 let deviceModelId;
 
