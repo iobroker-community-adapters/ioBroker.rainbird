@@ -120,6 +120,7 @@ function startAdapter(options) {
 function main() {
     deviceIpAdress = adapter.config.ipaddress;
     devicePassword = adapter.config.password;
+    deviceProtocol = adapter.config.protocol;
 
     pollingTime = adapter.config.pollinterval || 30000;
     if (pollingTime < 5000) {
@@ -142,9 +143,7 @@ function main() {
     ioBLib.setOrUpdateState('device.commands.runProgram', 'Run program manually', null, '', 'number', 'level');
     ioBLib.setOrUpdateState('device.commands.stopIrrigation', 'Stop irrigation', false, '', 'boolean', 'button.stop');
 
-    controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, adapter);
-    // Set protocol based on config (default http)
-    controller.protocol = adapter.config.protocol || 'http';
+    controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, deviceProtocol, adapter);
 
     pollStates();
 }
