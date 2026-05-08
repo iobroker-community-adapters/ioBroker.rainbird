@@ -92,6 +92,8 @@ function startAdapter(options) {
             adapter.log.warn('[START] IP address not set');
         } else if (!adapter.config.password) {
             adapter.log.warn('[START] Password not set');
+        } else if (!adapter.config.protocol) {
+            adapter.log.warn('[START] Protocol not set');
         } else {
             adapter.log.info(`[START] Starting Rain Bird adapter V${adapterVersion}${patchVersion}`);
             adapter.setState('info.connection', true, true);
