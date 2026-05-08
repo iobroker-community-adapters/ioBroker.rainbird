@@ -57,7 +57,6 @@ as expected.
 - (copilot) Adapter requires node.js >= 22 now
 - (copilot) Adapter requires admin >= 7.7.22 now
 - (copilot) Adapter requires js-controller >= 6.0.11 now
-- (copilot) Adapter requires admin >= 7.6.17 now
 
 ### 2.0.3 (2026-05-08)
 * (mobster80) added https support for Rainbird LNK. Migrated LNK devices to IQ4 cloud, please see additional information in section "IQ4 Cloud devices". Tested with ESP-TM2.
