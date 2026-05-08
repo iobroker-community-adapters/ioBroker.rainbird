@@ -9,7 +9,7 @@ const packageJson = require('./package.json');
 // const adapterName = packageJson.name.split('.').pop();
 const adapterVersion = packageJson.version;
 
-const patchVersion = 'r44';
+const patchVersion = 'r45';
 
 let adapter;
 let deviceIpAdress;
