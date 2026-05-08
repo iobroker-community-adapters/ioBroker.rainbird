@@ -3,6 +3,19 @@
     "name": "rainbird",
     "version": "2.0.3",
     "news": {
+      "2.0.3": {
+        "en": "",
+	"de": "Erweiterung zur Unterstüzung von Rainbird Controller, die auf die IQ4 Cloud mitgriert wurden",
+        "ru": "",
+        "pt": "",
+        "nl": "",
+        "fr": "",
+        "it": "",
+        "es": "",
+        "pl": "",
+        "uk": "",
+        "zh-cn": ""
+      },
       "2.0.2": {
         "en": "@strathcole/iob-lib has been migrated to local repository (#27)\nDependencies have been updated",
         "de": "@strathcole/iob-lib wurde zum lokalen repository migriert (#27)\nAbhängigkeiten wurden aktualisiert",
