@@ -37,7 +37,7 @@
     "@iobroker/testing": "^5.2.2",
     "@tsconfig/node14": "^14.1.8",
     "@types/node": "^22.19.18",
-    "typescript": "~5.7.3"
+    "typescript": "~6.0.3"
   },
   "main": "main.js",
   "files": [
