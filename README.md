@@ -41,6 +41,12 @@ Based on the python library "pyrainbird" from https://github.com/jbarrancos/pyra
 
 This adapter would not have been possible without the great work of Marius Burkard <m.burkard@pixcept.de>, who previous releases of this adapter.
 
+## IQ4 Cloud devices
+
+Because the LNK device has a limit of one connection simultaniously you need to disconnet it from the IQ4 cloud to respond properly. To accomplish that
+you need a firewall which will drop for example the whole traffic to the Internet only for you LNK IP address. After that you can connect with this adapter
+as expected.
+
 ## Changelog
 <!--
 	Placeholder for the next version (at the beginning of the line):
@@ -51,6 +57,7 @@ This adapter would not have been possible without the great work of Marius Burka
 - (copilot) Adapter requires node.js >= 22 now
 - (copilot) Adapter requires admin >= 7.7.22 now
 - (copilot) Adapter requires js-controller >= 6.0.11 now
+- (mobster80) added https support for Rainbird LNK. Migrated LNK devices to IQ4 cloud, please see additional information in section "IQ4 Cloud devices". Tested with ESP-TM2.
 
 ### 2.0.2 (2024-12-27)
 * (Feuersturm) @strathcole/iob-lib has been migrated to local repository (#27)

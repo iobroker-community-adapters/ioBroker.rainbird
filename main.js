@@ -14,6 +14,7 @@ const patchVersion = 'r44';
 let adapter;
 let deviceIpAdress;
 let devicePassword;
+let deviceProtocol;
 
 let deviceModelId;
 
@@ -92,6 +93,8 @@ function startAdapter(options) {
             adapter.log.warn('[START] IP address not set');
         } else if (!adapter.config.password) {
             adapter.log.warn('[START] Password not set');
+        } else if (!adapter.config.protocol) {
+            adapter.log.warn('[START] Protocol not set');
         } else {
             adapter.log.info(`[START] Starting Rain Bird adapter V${adapterVersion}${patchVersion}`);
             adapter.setState('info.connection', true, true);
@@ -120,6 +123,7 @@ function startAdapter(options) {
 function main() {
     deviceIpAdress = adapter.config.ipaddress;
     devicePassword = adapter.config.password;
+    deviceProtocol = adapter.config.protocol;
 
     pollingTime = adapter.config.pollinterval || 30000;
     if (pollingTime < 5000) {
@@ -128,6 +132,7 @@ function main() {
 
     adapter.log.info(`[INFO] Configured polling interval: ${pollingTime}`);
     adapter.log.debug(`[START] Started Adapter with: ${adapter.config.ipaddress}`);
+    adapter.log.debug(`[START] Started Adapter with protocol: ${adapter.config.protocol}`);
 
     adapter.subscribeStates('*');
 
@@ -142,7 +147,7 @@ function main() {
     ioBLib.setOrUpdateState('device.commands.runProgram', 'Run program manually', null, '', 'number', 'level');
     ioBLib.setOrUpdateState('device.commands.stopIrrigation', 'Stop irrigation', false, '', 'boolean', 'button.stop');
 
-    controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, adapter);
+    controller = new rainbird.RainbirdController(deviceIpAdress, devicePassword, deviceProtocol, adapter);
 
     pollStates();
 }
