@@ -57,7 +57,7 @@ as expected.
 - (copilot) Adapter requires node.js >= 22 now
 - (copilot) Adapter requires admin >= 7.7.22 now
 - (copilot) Adapter requires js-controller >= 6.0.11 now
-- (mobster80) added https support for Rainbird LNK. Migrated LNK devices to IQ4 cloud, please see additional information in section "IQ4 Cloud devices". Tested with ESP-TM2.
+- (mobster80) Https support for Rainbird LNK added. Migrated LNK devices to IQ4 cloud, please see additional information in section "IQ4 Cloud devices".
 
 ### 2.0.2 (2024-12-27)
 * (Feuersturm) @strathcole/iob-lib has been migrated to local repository (#27)
