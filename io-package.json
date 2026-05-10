@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "news": {
-      "2.1.0": {
+      "2.1.1": {
         "en": "Adapter requires node.js >= 22 now\nAdapter requires admin >= 7.7.22 now\nAdapter requires js-controller >= 6.0.11 now\nHttps support for Rainbird LNK added. Migrated LNK devices to IQ4 cloud, please see additional information in section \"IQ4 Cloud devices\".",
         "de": "Adapter benötigt node.js >= 22 jetzt\nAdapter benötigt admin >= 7.7.22 jetzt\nAdapter benötigt jetzt js-controller >= 6.0.11\nHttps Unterstützung für Rainbird LNK hinzugefügt. Migrated LNK-Geräte in die IQ4-Cloud, siehe weitere Informationen in Abschnitt \"IQ4 Cloud-Geräte\".",
         "ru": "Адаптер требует node.js >= 22 сейчас\nАдаптер требует администратора >= 7.7.22\nАдаптер требует js-контроллер >= 6.0.11\nДобавлена поддержка Https для Rainbird LNK Перенесенные устройства LNK в облако IQ4 см. дополнительную информацию в разделе «Устройства IQ4 Cloud».",

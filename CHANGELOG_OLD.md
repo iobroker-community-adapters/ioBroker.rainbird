@@ -3,7 +3,6 @@
 -   Fixed problem with sensor data
 -   Added seasonal water budget adjust information
 
-
 ## 0.2.2
 
 -   Added fixes for adapter crashes on failed connection to controller
