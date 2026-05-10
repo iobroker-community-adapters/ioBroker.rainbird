@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.0.2",
+    "version": "2.1.0",
     "news": {
+      "2.1.0": {
+        "en": "Adapter requires node.js >= 22 now\nAdapter requires admin >= 7.7.22 now\nAdapter requires js-controller >= 6.0.11 now\nHttps support for Rainbird LNK added. Migrated LNK devices to IQ4 cloud, please see additional information in section \"IQ4 Cloud devices\".",
+        "de": "Adapter benötigt node.js >= 22 jetzt\nAdapter benötigt admin >= 7.7.22 jetzt\nAdapter benötigt jetzt js-controller >= 6.0.11\nHttps Unterstützung für Rainbird LNK hinzugefügt. Migrated LNK-Geräte in die IQ4-Cloud, siehe weitere Informationen in Abschnitt \"IQ4 Cloud-Geräte\".",
+        "ru": "Адаптер требует node.js >= 22 сейчас\nАдаптер требует администратора >= 7.7.22\nАдаптер требует js-контроллер >= 6.0.11\nДобавлена поддержка Https для Rainbird LNK Перенесенные устройства LNK в облако IQ4 см. дополнительную информацию в разделе «Устройства IQ4 Cloud».",
+        "pt": "Adaptador requer nod.js >= 22 agora\nAdaptador requer admin >= 7.7.22 agora\nAdaptador requer js-controlador >= 6.0.11 agora\nSuporte Https para Rainbird LNK adicionado. Dispositivos LNK migrados para a nuvem IQ4, consulte informações adicionais na seção \"Dispositivos IQ4 Cloud\".",
+        "nl": "Voor de adapter zijn node.js < 22 nu nodig\nAdapter vereist admin < 7.7.22 nu\nAdapter vereist js-controller < 6,0.11 nu\nHttps ondersteuning voor Rainbird LNK toegevoegd. Migreerde LNK-apparaten naar IQ4-cloud, zie aanvullende informatie in de sectie \"IQ4 Cloud-apparaten.\".",
+        "fr": "Adaptateur nécessite node.js >= 22 maintenant\nAdaptateur nécessite admin >= 7.7.22 maintenant\nAdaptateur nécessite js-controller >= 6.0.11 maintenant\nSupport Https pour Rainbird LNK ajouté. Les périphériques LNK ont été migrés vers le cloud IQ4, veuillez consulter des informations supplémentaires dans la section « Appareils Cloud IQ4 ».",
+        "it": "Adattatore richiede node.js >= 22 ora\nAdattatore richiede admin >= 7.7.22 ora\nAdattatore richiede js-controller >= 6.0.11 ora\nHtttps supporto per Rainbird LNK aggiunto. Dispositivi LNK migrati al cloud IQ4, vedere ulteriori informazioni nella sezione \"IQ4 Cloud devices\".",
+        "es": "Adaptador requiere node.js ю= 22 ahora\nEl adaptador requiere administrador= 7.7.22 ahora\nAdaptador requiere js-controller >= 6.0.11\nSoporte de Htps para Rainbird LNK añadido. Migrated LNK devices to IQ4 cloud, please see additional information in section \"IQ4 Cloud devices\".",
+        "pl": "Adapter wymaga node.js > = 22\nAdapter wymaga admin > = 7.7.22\nAdapter wymaga sterownika js- > = 6.0.11\nWsparcie Https dla Rainbird LNK dodano. Migrowane urządzenia LNK do chmury IQ4, zobacz dodatkowe informacje w sekcji \"Urządzenia w chmurze IQ4\".",
+        "uk": "Адаптер вимагає node.js >= 22 тепер\nАдаптер вимагає адмін >= 7.7.22 тепер\nАдаптер вимагає js-controller >=6.0.11 тепер\nПідтримка Https для Rainbird LNK додано. Пристрої MIgrated LNK до хмари IQ4 див. додаткову інформацію в розділі \"ІQ4 Cloud devices\".",
+        "zh-cn": "适配器需要节点.js 现在22\n适任者需要管理员 \\ 7.7.22 现在\n适配器需要js控制器 现在6.0.11\nHttps支持雨鸟LNK增加. 将LNK设备移到IQ4云,请参见\"IQ4云设备\"部分的补充信息."
+      },
       "2.0.2": {
         "en": "@strathcole/iob-lib has been migrated to local repository (#27)\nDependencies have been updated",
         "de": "@strathcole/iob-lib wurde zum lokalen repository migriert (#27)\nAbhängigkeiten wurden aktualisiert",
