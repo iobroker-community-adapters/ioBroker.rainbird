@@ -93,8 +93,6 @@ function startAdapter(options) {
             adapter.log.warn('[START] IP address not set');
         } else if (!adapter.config.password) {
             adapter.log.warn('[START] Password not set');
-        } else if (!adapter.config.protocol) {
-            adapter.log.warn('[START] Protocol not set');
         } else {
             adapter.log.info(`[START] Starting Rain Bird adapter V${adapterVersion}${patchVersion}`);
             adapter.setState('info.connection', true, true);
@@ -124,6 +122,10 @@ function main() {
     deviceIpAdress = adapter.config.ipaddress;
     devicePassword = adapter.config.password;
     deviceProtocol = adapter.config.protocol;
+    if (!deviceProtocol) {
+        adapter.log.info('[INFO] Communication protocol not set - defaulting to http');
+        deviceProtocol = 'http';
+    }
 
     pollingTime = adapter.config.pollinterval || 30000;
     if (pollingTime < 5000) {
