@@ -1,4 +1,11 @@
 # Older Changelogs
+## 1.0.1 (2024-06-06)
+* (mcm1957) Adapter requires node.js 18 and js-controller >= 5 now
+* (mcm1957) Adapter has been move to iobroker-community-adapters organization
+* (mcm1957) Adapter-core has been adapter, adapter supports js-controller 6 now.
+* (mcm1957) Dependencies have been updated
+
+
 ## 0.2.3
 -   Fixed problem with sensor data
 -   Added seasonal water budget adjust information

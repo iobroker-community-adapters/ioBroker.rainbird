@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "rainbird",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "news": {
+      "2.1.2": {
+        "en": "Fixed default protocol handling (default to http) if configuration setting is missing",
+        "de": "Fixed default Protocol Handling (Standard auf http) wenn die Konfigurationseinstellung fehlt",
+        "ru": "Фиксированная обработка протокола по умолчанию (по умолчанию до http), если настройка конфигурации отсутствует",
+        "pt": "Tratamento fixo por omissão do protocolo (por omissão em http) se faltar a configuração",
+        "nl": "Fixed default protocol handling (standaard naar http) als configuratieinstellingen ontbreken",
+        "fr": "Gestion du protocole par défaut fixe (par défaut à http) si la configuration est manquante",
+        "it": "Gestione del protocollo predefinito (default to http) se manca l'impostazione di configurazione",
+        "es": "Manejo de protocolo por defecto fijo (por defecto a http) si falta configuración de configuración",
+        "pl": "Naprawiono domyślną obsługę protokołu (domyślnie http), jeśli brakuje ustawienia konfiguracji",
+        "uk": "Виправлена обробка протоколу за замовчуванням (default to HTTP) якщо налаштування конфігурації відсутні",
+        "zh-cn": "如果配置设置缺失, 则固定默认协议处理( 默认为 http)"
+      },
       "2.1.1": {
         "en": "Adapter requires node.js >= 22 now\nAdapter requires admin >= 7.7.22 now\nAdapter requires js-controller >= 6.0.11 now\nHttps support for Rainbird LNK added. Migrated LNK devices to IQ4 cloud, please see additional information in section \"IQ4 Cloud devices\".",
         "de": "Adapter benötigt node.js >= 22 jetzt\nAdapter benötigt admin >= 7.7.22 jetzt\nAdapter benötigt jetzt js-controller >= 6.0.11\nHttps Unterstützung für Rainbird LNK hinzugefügt. Migrated LNK-Geräte in die IQ4-Cloud, siehe weitere Informationen in Abschnitt \"IQ4 Cloud-Geräte\".",

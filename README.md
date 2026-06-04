@@ -52,8 +52,7 @@ as expected.
 	Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 2.1.2 (2026-06-04)
 - (mobster80) Fixed default protocol handling (default to http) if configuration setting is missing
 
 ### 2.1.1 (2026-05-10)
@@ -74,12 +73,6 @@ as expected.
 * (mcm1957) Adapter requires node.js 20 now
 * (mcm1957) Adapter requires js-controller 5 and admin 6  now
 * (Feuersturm) switch adapter config to jsonconfig
-* (mcm1957) Dependencies have been updated
-
-### 1.0.1 (2024-06-06)
-* (mcm1957) Adapter requires node.js 18 and js-controller >= 5 now
-* (mcm1957) Adapter has been move to iobroker-community-adapters organization
-* (mcm1957) Adapter-core has been adapter, adapter supports js-controller 6 now.
 * (mcm1957) Dependencies have been updated
 
 [Older changelogs can be found there](CHANGELOG_OLD.md)
