@@ -51,8 +51,11 @@ as expected.
 <!--
 	Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
-- (mobster80) Fixed default protocol handling (default to http) if configuration setting is missing
 -->
+
+### **WORK IN PROGRESS**
+- (mobster80) Fixed default protocol handling (default to http) if configuration setting is missing
+
 ### 2.1.1 (2026-05-10)
 - (copilot) Adapter requires node.js >= 22 now
 - (copilot) Adapter requires admin >= 7.7.22 now
