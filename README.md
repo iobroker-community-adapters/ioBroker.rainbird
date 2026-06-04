@@ -78,7 +78,9 @@ as expected.
 * (mcm1957) Adapter-core has been adapter, adapter supports js-controller 6 now.
 * (mcm1957) Dependencies have been updated
 
-[Older changelogs can be found there](CHANGELOG_OLD.md)## License
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
+## License
 
 The MIT License (MIT)
 
